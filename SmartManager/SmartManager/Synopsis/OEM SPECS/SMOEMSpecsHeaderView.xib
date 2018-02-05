@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SMOEMSpecsHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1sN-km-FNE">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="NpH-Oy-Yhi" customClass="SMCustomButtonGrayColor">
+                    <rect key="frame" x="8" y="0.0" width="304" height="34"/>
+                    <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSpecificationDidClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="QVK-5d-thW"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrowT" translatesAutoresizingMaskIntoConstraints="NO" id="ypL-59-9Lb">
+                    <rect key="frame" x="280" y="7" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Fy4-86-QaP"/>
+                        <constraint firstAttribute="width" constant="20" id="zVK-Ch-kCc"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="NpH-Oy-Yhi" secondAttribute="centerX" id="6uW-FJ-T1o"/>
+                <constraint firstAttribute="bottom" secondItem="1sN-km-FNE" secondAttribute="bottom" id="C92-cq-eFu"/>
+                <constraint firstItem="NpH-Oy-Yhi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ERk-Ge-5Uv"/>
+                <constraint firstItem="1sN-km-FNE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IbL-Ab-uJx"/>
+                <constraint firstAttribute="trailing" secondItem="ypL-59-9Lb" secondAttribute="trailing" constant="20" id="RKG-Os-aPr"/>
+                <constraint firstAttribute="trailing" secondItem="1sN-km-FNE" secondAttribute="trailing" id="W0d-Hh-Q9m"/>
+                <constraint firstAttribute="trailing" secondItem="NpH-Oy-Yhi" secondAttribute="trailing" constant="8" id="ZZR-tl-gd7"/>
+                <constraint firstItem="1sN-km-FNE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aDe-wr-HUn"/>
+                <constraint firstAttribute="centerY" secondItem="ypL-59-9Lb" secondAttribute="centerY" id="hzO-MX-tfh"/>
+                <constraint firstAttribute="centerY" secondItem="NpH-Oy-Yhi" secondAttribute="centerY" id="lAg-oC-L0y"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnSpecification" destination="NpH-Oy-Yhi" id="muH-0T-mFY"/>
+                <outlet property="imgArrow" destination="ypL-59-9Lb" id="BbX-44-mP1"/>
+            </connections>
+            <point key="canvasLocation" x="345" y="128"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="down_arrowT" width="15" height="15"/>
+    </resources>
+</document>

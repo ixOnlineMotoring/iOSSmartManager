@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="KGk-i7-Jjw" customClass="SMSMSynopsisTableHeaderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="UMF-40-Rwa">
+                        <rect key="frame" x="8" y="8.5" width="107" height="93"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="93" id="bBS-ZR-hMU"/>
+                            <constraint firstAttribute="width" constant="107" id="sSb-wC-vOs"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="191" translatesAutoresizingMaskIntoConstraints="NO" id="aJC-L0-ztq">
+                        <rect key="frame" x="121" y="6" width="191" height="21.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="MOh-1O-NJQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="13"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="191" translatesAutoresizingMaskIntoConstraints="NO" id="Bkn-Ph-xkX">
+                        <rect key="frame" x="121" y="35.5" width="191" height="29"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="aeM-vU-d32"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="13"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0Y-kA-zNJ">
+                        <rect key="frame" x="8" y="8" width="107" height="93"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aJC-L0-ztq" firstAttribute="leading" secondItem="UMF-40-Rwa" secondAttribute="trailing" constant="6" id="4At-tt-dOF"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="UMF-40-Rwa" secondAttribute="leading" id="Ce7-ex-bSf"/>
+                    <constraint firstItem="Bkn-Ph-xkX" firstAttribute="top" secondItem="aJC-L0-ztq" secondAttribute="bottom" constant="8" id="Gba-PJ-d6q"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Bkn-Ph-xkX" secondAttribute="trailing" id="Jmi-nA-LP8"/>
+                    <constraint firstAttribute="bottom" secondItem="UMF-40-Rwa" secondAttribute="bottom" constant="8" id="bfN-7u-BsB"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Bkn-Ph-xkX" secondAttribute="bottom" priority="250" constant="54" id="gce-ew-lHb"/>
+                    <constraint firstItem="Bkn-Ph-xkX" firstAttribute="leading" secondItem="UMF-40-Rwa" secondAttribute="trailing" constant="6" id="gzR-xv-K04"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="aJC-L0-ztq" secondAttribute="trailing" id="p4M-ny-o1e"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="UMF-40-Rwa" secondAttribute="bottom" constant="17" id="u2E-En-RqP"/>
+                    <constraint firstItem="aJC-L0-ztq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-2" id="v9O-BJ-rdO"/>
+                    <constraint firstAttribute="topMargin" secondItem="UMF-40-Rwa" secondAttribute="top" id="vCU-yr-63Z"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="bfN-7u-BsB"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="btnVehicleImage" destination="u0Y-kA-zNJ" id="TSD-oF-fOb"/>
+                <outlet property="vechicleDesciption" destination="Bkn-Ph-xkX" id="3gY-AA-n2W"/>
+                <outlet property="vechicleImage" destination="UMF-40-Rwa" id="MyD-sr-xPC"/>
+                <outlet property="vechicleName" destination="aJC-L0-ztq" id="0vW-I1-DVU"/>
+            </connections>
+            <point key="canvasLocation" x="241" y="-28"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="placeholder.jpeg" width="88" height="88"/>
+    </resources>
+</document>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SMVehicleAuditHistoryViewController">
+            <connections>
+                <outlet property="lblNoRecords" destination="gfu-nx-pAk" id="3H9-uE-Nbq"/>
+                <outlet property="lblSelectAuditDate" destination="fUT-Do-Qcb" id="yAe-x1-AsK"/>
+                <outlet property="tblViewAuditDates" destination="1Pn-K2-SZ4" id="KJN-tK-bkc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Audit Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUT-Do-Qcb">
+                    <rect key="frame" x="8" y="14" width="304" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No record(s) found." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfu-nx-pAk">
+                    <rect key="frame" x="8" y="119" width="304" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Pn-K2-SZ4">
+                    <rect key="frame" x="8" y="43" width="304" height="517"/>
+                    <color key="backgroundColor" red="0.08235294118" green="0.08235294118" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="mt5-3S-ZXy"/>
+                        <outlet property="delegate" destination="-1" id="Fts-jh-ma9"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fUT-Do-Qcb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="14" id="8YX-CC-Rqd"/>
+                <constraint firstItem="1Pn-K2-SZ4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="9Xo-jf-a7S"/>
+                <constraint firstAttribute="trailing" secondItem="fUT-Do-Qcb" secondAttribute="trailing" constant="8" id="ByA-4R-Sec"/>
+                <constraint firstAttribute="trailing" secondItem="1Pn-K2-SZ4" secondAttribute="trailing" constant="8" id="F04-Xx-tBt"/>
+                <constraint firstItem="fUT-Do-Qcb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="FeH-ZO-pWE"/>
+                <constraint firstAttribute="bottom" secondItem="1Pn-K2-SZ4" secondAttribute="bottom" constant="8" id="KYB-gA-mfI"/>
+                <constraint firstItem="1Pn-K2-SZ4" firstAttribute="top" secondItem="fUT-Do-Qcb" secondAttribute="bottom" constant="8" id="Ym7-f2-rjr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="163" y="249"/>
+        </view>
+    </objects>
+</document>

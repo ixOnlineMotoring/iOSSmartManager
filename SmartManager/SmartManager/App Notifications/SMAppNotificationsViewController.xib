@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SMAppNotificationsViewController">
+            <connections>
+                <outlet property="tblViewAppNotifications" destination="0Aw-rl-AfK" id="XlF-UE-702"/>
+                <outlet property="txtFieldSearch" destination="iV9-rT-MUS" id="gsX-fS-yvS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewTableFooter" destination="r2P-Ub-Y91" id="div-7s-Q2I"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Aw-rl-AfK">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="tBL-Rd-Hn8"/>
+                        <outlet property="delegate" destination="-1" id="gGi-Iq-lTF"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0Aw-rl-AfK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="R9X-FW-aIO"/>
+                <constraint firstAttribute="bottom" secondItem="0Aw-rl-AfK" secondAttribute="bottom" id="f0K-3j-gUM"/>
+                <constraint firstAttribute="trailing" secondItem="0Aw-rl-AfK" secondAttribute="trailing" id="mud-9x-xDt"/>
+                <constraint firstItem="0Aw-rl-AfK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vjy-Hc-x9Z"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-253" y="-474"/>
+        </view>
+        <view contentMode="scaleToFill" id="r2P-Ub-Y91">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iV9-rT-MUS" customClass="SMCustomTextField">
+                    <rect key="frame" x="10" y="17" width="355" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="OAR-cx-aLZ"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="iV9-rT-MUS" secondAttribute="trailing" constant="10" id="Az5-9H-vKF"/>
+                <constraint firstItem="iV9-rT-MUS" firstAttribute="leading" secondItem="r2P-Ub-Y91" secondAttribute="leading" constant="10" id="PJS-mm-ub7"/>
+                <constraint firstItem="iV9-rT-MUS" firstAttribute="top" secondItem="r2P-Ub-Y91" secondAttribute="top" constant="17" id="Xyh-RB-g8X"/>
+                <constraint firstAttribute="bottom" secondItem="iV9-rT-MUS" secondAttribute="bottom" constant="11" id="dU1-sX-mzr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-368.5" y="22"/>
+        </view>
+    </objects>
+</document>

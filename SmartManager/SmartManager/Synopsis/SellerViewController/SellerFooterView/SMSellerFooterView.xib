@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="7ub-5t-PwV" customClass="SMSellerFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN6-Yc-sZg">
+                    <rect key="frame" x="8" y="6" width="127" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="127" id="nch-pa-JDR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUF-zb-Krm" customClass="SMCustomTextField">
+                    <rect key="frame" x="136" y="6" width="176" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="2Zq-Gb-YJQ"/>
+                        <constraint firstAttribute="width" constant="176" id="d9A-FJ-Ocu"/>
+                    </constraints>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqe-3K-RSk">
+                    <rect key="frame" x="8" y="46" width="127" height="20"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="127" id="k6R-Pf-jpj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZf-q1-zgN">
+                    <rect key="frame" x="8" y="80" width="127" height="20"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="127" id="VvH-gm-QEW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIb-Nz-44b" customClass="CustomTextView">
+                    <rect key="frame" x="8" y="114" width="304" height="52"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seZ-Be-jCy" customClass="SMCustomButtonBlue">
+                    <rect key="frame" x="8" y="177" width="304" height="37"/>
+                    <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                    <state key="normal" title="Save">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oas-Oj-ANL" customClass="SMCustomTextField">
+                    <rect key="frame" x="136" y="46" width="176" height="20"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="PN6-Yc-sZg" firstAttribute="leading" secondItem="7ub-5t-PwV" secondAttribute="leading" constant="8" id="4Lu-Qj-9SF"/>
+                <constraint firstItem="Oas-Oj-ANL" firstAttribute="top" secondItem="oUF-zb-Krm" secondAttribute="bottom" constant="10" id="7j3-X9-hjI"/>
+                <constraint firstAttribute="trailing" secondItem="seZ-Be-jCy" secondAttribute="trailing" constant="8" id="9aq-R5-bIJ"/>
+                <constraint firstItem="eZf-q1-zgN" firstAttribute="top" secondItem="vqe-3K-RSk" secondAttribute="bottom" constant="14" id="9at-MA-34H"/>
+                <constraint firstItem="vIb-Nz-44b" firstAttribute="top" secondItem="eZf-q1-zgN" secondAttribute="bottom" constant="14" id="AF5-My-dWE"/>
+                <constraint firstItem="vqe-3K-RSk" firstAttribute="leading" secondItem="PN6-Yc-sZg" secondAttribute="leading" id="DFb-eO-Ywb"/>
+                <constraint firstItem="vIb-Nz-44b" firstAttribute="leading" secondItem="7ub-5t-PwV" secondAttribute="leading" constant="8" id="Dva-Gl-gws"/>
+                <constraint firstItem="Oas-Oj-ANL" firstAttribute="leading" secondItem="oUF-zb-Krm" secondAttribute="leading" id="G6r-5n-Cd2"/>
+                <constraint firstItem="oUF-zb-Krm" firstAttribute="top" secondItem="7ub-5t-PwV" secondAttribute="top" constant="6" id="Hsa-hd-j9y"/>
+                <constraint firstItem="PN6-Yc-sZg" firstAttribute="bottom" secondItem="oUF-zb-Krm" secondAttribute="bottom" id="Jqx-zn-Xm7"/>
+                <constraint firstAttribute="trailing" secondItem="oUF-zb-Krm" secondAttribute="trailing" constant="8" id="KfY-q8-vXb"/>
+                <constraint firstItem="seZ-Be-jCy" firstAttribute="top" secondItem="vIb-Nz-44b" secondAttribute="bottom" constant="11" id="QH3-Dk-2IS"/>
+                <constraint firstAttribute="trailing" secondItem="vIb-Nz-44b" secondAttribute="trailing" constant="8" id="Syi-kA-Kfc"/>
+                <constraint firstAttribute="bottom" secondItem="seZ-Be-jCy" secondAttribute="bottom" constant="10" id="Thi-I1-IRH"/>
+                <constraint firstItem="eZf-q1-zgN" firstAttribute="leading" secondItem="vqe-3K-RSk" secondAttribute="leading" id="Vep-LN-Olh"/>
+                <constraint firstItem="vqe-3K-RSk" firstAttribute="top" secondItem="PN6-Yc-sZg" secondAttribute="bottom" constant="10" id="cKa-UJ-03x"/>
+                <constraint firstItem="vqe-3K-RSk" firstAttribute="trailing" secondItem="PN6-Yc-sZg" secondAttribute="trailing" id="fMP-O9-awF"/>
+                <constraint firstItem="Oas-Oj-ANL" firstAttribute="trailing" secondItem="oUF-zb-Krm" secondAttribute="trailing" id="fvn-tz-4Hh"/>
+                <constraint firstItem="eZf-q1-zgN" firstAttribute="trailing" secondItem="vqe-3K-RSk" secondAttribute="trailing" id="lxQ-Gd-IQZ"/>
+                <constraint firstItem="oUF-zb-Krm" firstAttribute="leading" secondItem="PN6-Yc-sZg" secondAttribute="trailing" constant="1" id="mps-Rz-pGt"/>
+                <constraint firstItem="PN6-Yc-sZg" firstAttribute="top" secondItem="oUF-zb-Krm" secondAttribute="top" id="qra-GQ-nEJ"/>
+                <constraint firstItem="seZ-Be-jCy" firstAttribute="leading" secondItem="7ub-5t-PwV" secondAttribute="leading" constant="8" id="tbw-r8-3Lf"/>
+                <constraint firstItem="eZf-q1-zgN" firstAttribute="top" secondItem="7ub-5t-PwV" secondAttribute="top" constant="80" id="yBB-13-Ax3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnSave" destination="seZ-Be-jCy" id="JdW-Wo-tNl"/>
+                <outlet property="txtFieldEmailID" destination="oUF-zb-Krm" id="Cyg-PI-hRf"/>
+                <outlet property="txtFieldMobilNum" destination="Oas-Oj-ANL" id="ljL-Du-I1Q"/>
+                <outlet property="txtViewComment" destination="vIb-Nz-44b" id="rpV-LE-pub"/>
+            </connections>
+            <point key="canvasLocation" x="234" y="-19"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

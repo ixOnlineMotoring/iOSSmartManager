@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Xl9-ut-73N" customClass="AGPushNoteView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBw-fo-RCP">
+                    <rect key="frame" x="6" y="8" width="307" height="51"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_notification" translatesAutoresizingMaskIntoConstraints="NO" id="1ub-iG-9aW">
+                            <rect key="frame" x="8" y="8" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="Csk-k8-21S"/>
+                                <constraint firstAttribute="width" constant="34" id="TFi-YB-Dg0"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kME-0h-Exv">
+                            <rect key="frame" x="50" y="4" width="249" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="YEM-Mi-X8b"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Seo-8J-J09">
+                            <rect key="frame" x="50" y="28" width="249" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="17" id="6EB-df-2K0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="13"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="1ub-iG-9aW" firstAttribute="top" secondItem="yBw-fo-RCP" secondAttribute="top" constant="8" id="7rh-z3-y6K"/>
+                        <constraint firstAttribute="trailing" secondItem="kME-0h-Exv" secondAttribute="trailing" constant="8" id="EpG-PO-TJ7"/>
+                        <constraint firstItem="kME-0h-Exv" firstAttribute="top" secondItem="yBw-fo-RCP" secondAttribute="top" constant="4" id="Wbj-KL-Kds"/>
+                        <constraint firstAttribute="bottom" secondItem="Seo-8J-J09" secondAttribute="bottom" constant="6" id="dvO-uw-kFy"/>
+                        <constraint firstItem="Seo-8J-J09" firstAttribute="top" secondItem="kME-0h-Exv" secondAttribute="bottom" constant="3" id="hOS-a5-cWK"/>
+                        <constraint firstItem="Seo-8J-J09" firstAttribute="leading" secondItem="1ub-iG-9aW" secondAttribute="trailing" constant="8" id="qjm-0v-wkm"/>
+                        <constraint firstItem="kME-0h-Exv" firstAttribute="leading" secondItem="1ub-iG-9aW" secondAttribute="trailing" constant="8" id="tY9-SE-ork"/>
+                        <constraint firstAttribute="trailing" secondItem="Seo-8J-J09" secondAttribute="trailing" constant="8" id="yJb-k1-hg2"/>
+                        <constraint firstItem="1ub-iG-9aW" firstAttribute="leading" secondItem="yBw-fo-RCP" secondAttribute="leading" constant="8" id="zB3-YV-koB"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="yBw-fo-RCP" secondAttribute="bottom" constant="7" id="GWL-rZ-11p"/>
+                <constraint firstItem="yBw-fo-RCP" firstAttribute="top" secondItem="Xl9-ut-73N" secondAttribute="top" constant="8" id="JUY-aI-vvU"/>
+                <constraint firstAttribute="trailing" secondItem="yBw-fo-RCP" secondAttribute="trailing" constant="7" id="NkE-Cz-fel"/>
+                <constraint firstItem="yBw-fo-RCP" firstAttribute="leading" secondItem="Xl9-ut-73N" secondAttribute="leading" constant="6" id="nPo-UG-XwX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="messageLabel" destination="Seo-8J-J09" id="29B-Pb-Qbo"/>
+            </connections>
+            <point key="canvasLocation" x="-67.5" y="219"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_notification" width="192" height="192"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

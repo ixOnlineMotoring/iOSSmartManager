@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SMSynopsisVerifyVINViewController">
+            <connections>
+                <outlet property="btnFullVerification" destination="xGR-aE-APT" id="0gg-Ld-U4t"/>
+                <outlet property="imgViewArrow1" destination="62K-St-aAx" id="BLX-vG-Or8"/>
+                <outlet property="imgViewArrow2" destination="sJW-jw-5NK" id="Pc8-6Y-4fX"/>
+                <outlet property="lblMainVehicleName" destination="Mvt-4K-AR4" id="1pu-kj-BCE"/>
+                <outlet property="tblVerifyVIN" destination="jNJ-Nf-coZ" id="LMj-Vo-6y0"/>
+                <outlet property="txtRegNo" destination="Hht-Le-Y0h" id="qlr-l0-lTk"/>
+                <outlet property="txtVinNumber" destination="Gl4-wS-HhC" id="2vN-5g-OEs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewFooterTable" destination="wk2-we-7IK" id="zld-DG-E8B"/>
+                <outlet property="viewHeaderChangeVehicle" destination="VVT-nP-poE" id="Pbz-hQ-itV"/>
+                <outlet property="viewHeaderFullVerification" destination="afm-oE-gd5" id="CzO-rT-7iw"/>
+                <outlet property="viewHeaderTable" destination="3Dq-eY-wFE" id="W9G-rW-6CS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jNJ-Nf-coZ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qcp-QF-Bs1"/>
+                        <outlet property="delegate" destination="-1" id="csa-uu-bZ3"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="jNJ-Nf-coZ" secondAttribute="trailing" id="BvI-p7-AEW"/>
+                <constraint firstAttribute="bottom" secondItem="jNJ-Nf-coZ" secondAttribute="bottom" id="FOF-54-Mpz"/>
+                <constraint firstItem="jNJ-Nf-coZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="usv-KK-yU0"/>
+                <constraint firstItem="jNJ-Nf-coZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yrl-xa-dPB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="861" y="188"/>
+        </view>
+        <view contentMode="scaleToFill" id="3Dq-eY-wFE" userLabel="ViewTableHeader">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="197"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No VIN loaded" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gl4-wS-HhC" customClass="SMCustomTextField">
+                    <rect key="frame" x="83" y="79" width="229" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="72n-Gh-AVZ"/>
+                    </constraints>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="8mD-F9-yQJ"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please note you will be invoiced by iX for either of the below verifications." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="310" translatesAutoresizingMaskIntoConstraints="NO" id="lj1-9R-ryG" customClass="SMCustomLabelAutolayout">
+                    <rect key="frame" x="8" y="34" width="304" height="36"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="epm-MP-KH4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="12"/>
+                    <color key="textColor" red="0.87450980389999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvt-4K-AR4" customClass="SMCustomLabelAutolayout">
+                    <rect key="frame" x="8" y="9" width="304" height="25"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="0c4-Vr-EBT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reg #" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zd5-6E-jFC">
+                    <rect key="frame" x="8" y="118" width="67" height="25"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Rmi-rF-gB2"/>
+                        <constraint firstAttribute="width" constant="67" id="g1P-qN-cb0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No Reg loaded" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hht-Le-Y0h" customClass="SMCustomTextField">
+                    <rect key="frame" x="83" y="115" width="229" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="ZVA-yY-0ZJ"/>
+                        <constraint firstAttribute="height" constant="30" id="dLU-FX-YdP"/>
+                    </constraints>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="2bJ-X5-NtU"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**For the SAPS stolen details the registration number is important" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="310" translatesAutoresizingMaskIntoConstraints="NO" id="Ork-z6-y7o" customClass="SMCustomLabelAutolayout">
+                    <rect key="frame" x="9" y="153" width="304" height="36"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="tbs-U7-F3U"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="wPP-qW-8EF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="12"/>
+                    <color key="textColor" red="0.87450980389999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIN #" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQM-8n-dWi">
+                    <rect key="frame" x="8" y="82" width="67" height="25"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="67" id="daa-OD-kZs"/>
+                        <constraint firstAttribute="height" constant="25" id="f1G-mC-hma"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Hht-Le-Y0h" firstAttribute="top" secondItem="Gl4-wS-HhC" secondAttribute="bottom" constant="6" id="3Ib-Py-34a"/>
+                <constraint firstItem="Hht-Le-Y0h" firstAttribute="leading" secondItem="Zd5-6E-jFC" secondAttribute="trailing" constant="8" id="6t9-dF-yZi"/>
+                <constraint firstAttribute="trailing" secondItem="Gl4-wS-HhC" secondAttribute="trailing" constant="8" id="9wg-sp-kIF"/>
+                <constraint firstItem="Mvt-4K-AR4" firstAttribute="leading" secondItem="3Dq-eY-wFE" secondAttribute="leading" constant="8" id="ATp-jz-98h"/>
+                <constraint firstItem="MQM-8n-dWi" firstAttribute="leading" secondItem="3Dq-eY-wFE" secondAttribute="leading" constant="8" id="CI4-v9-IHE"/>
+                <constraint firstItem="Mvt-4K-AR4" firstAttribute="top" secondItem="3Dq-eY-wFE" secondAttribute="top" constant="9" id="D1z-Ce-AgL"/>
+                <constraint firstAttribute="trailing" secondItem="Hht-Le-Y0h" secondAttribute="trailing" constant="8" id="EHQ-D6-Ipg"/>
+                <constraint firstItem="Hht-Le-Y0h" firstAttribute="leading" secondItem="Zd5-6E-jFC" secondAttribute="trailing" constant="8" id="Hty-8o-4T8"/>
+                <constraint firstItem="lj1-9R-ryG" firstAttribute="top" secondItem="Mvt-4K-AR4" secondAttribute="bottom" id="IJK-tM-0b1"/>
+                <constraint firstAttribute="trailing" secondItem="Ork-z6-y7o" secondAttribute="trailing" constant="7" id="JyA-sU-d3Z"/>
+                <constraint firstItem="Ork-z6-y7o" firstAttribute="leading" secondItem="3Dq-eY-wFE" secondAttribute="leading" constant="9" id="PRb-i2-jqA"/>
+                <constraint firstItem="Zd5-6E-jFC" firstAttribute="leading" secondItem="3Dq-eY-wFE" secondAttribute="leading" constant="8" id="RAz-be-SGT"/>
+                <constraint firstAttribute="bottom" secondItem="MQM-8n-dWi" secondAttribute="bottom" priority="999" constant="10" id="Uz4-BU-r22"/>
+                <constraint firstItem="Zd5-6E-jFC" firstAttribute="top" secondItem="MQM-8n-dWi" secondAttribute="bottom" constant="11" id="bfV-Nl-zWs"/>
+                <constraint firstAttribute="trailing" secondItem="Mvt-4K-AR4" secondAttribute="trailing" constant="8" id="bmL-CV-kdF"/>
+                <constraint firstItem="MQM-8n-dWi" firstAttribute="top" secondItem="lj1-9R-ryG" secondAttribute="bottom" constant="12" id="gxy-3d-vkT"/>
+                <constraint firstAttribute="bottom" secondItem="Ork-z6-y7o" secondAttribute="bottom" constant="8" id="jjb-e6-TL7"/>
+                <constraint firstItem="lj1-9R-ryG" firstAttribute="leading" secondItem="3Dq-eY-wFE" secondAttribute="leading" constant="8" id="l9v-nU-qnu"/>
+                <constraint firstItem="Hht-Le-Y0h" firstAttribute="top" secondItem="Gl4-wS-HhC" secondAttribute="bottom" constant="6" id="lG7-Gp-w7W"/>
+                <constraint firstItem="Gl4-wS-HhC" firstAttribute="top" secondItem="lj1-9R-ryG" secondAttribute="bottom" constant="9" id="mX2-fB-e26"/>
+                <constraint firstItem="Gl4-wS-HhC" firstAttribute="leading" secondItem="MQM-8n-dWi" secondAttribute="trailing" constant="8" id="qap-gz-ooh"/>
+                <constraint firstAttribute="trailing" secondItem="lj1-9R-ryG" secondAttribute="trailing" constant="8" id="rLx-W9-g2I"/>
+                <constraint firstItem="Ork-z6-y7o" firstAttribute="top" secondItem="Hht-Le-Y0h" secondAttribute="bottom" constant="8" id="uet-Nh-sPh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Uz4-BU-r22"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="412" y="115.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="VVT-nP-poE" userLabel="ViewSecion1Header">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOF-tk-ab9" customClass="SMCustomButtonGrayColor">
+                    <rect key="frame" x="8" y="57" width="304" height="30"/>
+                    <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
+                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="VIN verification details">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnVINVerificationButtonDidClicked:" destination="-1" eventType="touchUpInside" id="4sM-Rx-mZn"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrowT" translatesAutoresizingMaskIntoConstraints="NO" id="62K-St-aAx">
+                    <rect key="frame" x="285" y="62" width="20" height="20"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="WSE-UG-iVa"/>
+                        <constraint firstAttribute="width" constant="20" id="qBz-66-CCm"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4K-fm-jGT" customClass="SMCustomButtonBlue">
+                    <rect key="frame" x="8" y="7" width="304" height="40"/>
+                    <color key="backgroundColor" red="0.20392156859999999" green="0.46274509800000002" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Zd6-L2-w5E"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="Verify VIN">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnBlueVerifyVinDidClicked:" destination="-1" eventType="touchUpInside" id="V22-wh-gDr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TOF-tk-ab9" firstAttribute="top" secondItem="h4K-fm-jGT" secondAttribute="bottom" constant="10" id="294-1X-axX"/>
+                <constraint firstAttribute="trailing" secondItem="TOF-tk-ab9" secondAttribute="trailing" constant="8" id="3Qr-Vv-9Mv"/>
+                <constraint firstAttribute="bottom" secondItem="TOF-tk-ab9" secondAttribute="bottom" priority="999" constant="7" id="DYm-Ti-m2N"/>
+                <constraint firstAttribute="trailing" secondItem="62K-St-aAx" secondAttribute="trailing" constant="15" id="DiA-av-8r8"/>
+                <constraint firstAttribute="bottom" secondItem="62K-St-aAx" secondAttribute="bottom" constant="12" id="GXF-Z1-r0e"/>
+                <constraint firstItem="h4K-fm-jGT" firstAttribute="leading" secondItem="VVT-nP-poE" secondAttribute="leading" constant="8" id="LJJ-aw-2RO"/>
+                <constraint firstItem="h4K-fm-jGT" firstAttribute="top" secondItem="VVT-nP-poE" secondAttribute="top" constant="7" id="TJI-fX-lNs"/>
+                <constraint firstAttribute="trailing" secondItem="h4K-fm-jGT" secondAttribute="trailing" constant="8" id="eLp-0W-8Qv"/>
+                <constraint firstItem="TOF-tk-ab9" firstAttribute="leading" secondItem="VVT-nP-poE" secondAttribute="leading" constant="8" id="slb-Tu-4B0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="639" y="-209"/>
+        </view>
+        <view contentMode="scaleToFill" id="afm-oE-gd5" userLabel="ViewSection3Header">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSS-1v-O5y" customClass="SMCustomButtonGrayColor">
+                    <rect key="frame" x="8" y="54" width="304" height="30"/>
+                    <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Full Verification">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnFullVerificationDidClicked:" destination="-1" eventType="touchUpInside" id="QNi-Ob-Idj"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrowT" translatesAutoresizingMaskIntoConstraints="NO" id="sJW-jw-5NK">
+                    <rect key="frame" x="285" y="59" width="20" height="20"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="BiS-Os-EDZ"/>
+                        <constraint firstAttribute="width" constant="20" id="ZLv-jv-hNc"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGR-aE-APT">
+                    <rect key="frame" x="8" y="4" width="304" height="40"/>
+                    <color key="backgroundColor" red="0.92156862745098034" green="0.51764705882352935" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Iza-BV-x9a"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="Full Verification">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnYellowFullVerificationDidClicked:" destination="-1" eventType="touchUpInside" id="jbW-vA-DeU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sJW-jw-5NK" secondAttribute="bottom" constant="12" id="4Sw-Fn-ibV"/>
+                <constraint firstAttribute="bottom" secondItem="HSS-1v-O5y" secondAttribute="bottom" priority="999" constant="7" id="FTl-0K-h8f"/>
+                <constraint firstAttribute="trailing" secondItem="sJW-jw-5NK" secondAttribute="trailing" constant="15" id="f9c-ym-8aG"/>
+                <constraint firstItem="xGR-aE-APT" firstAttribute="top" secondItem="afm-oE-gd5" secondAttribute="top" constant="4" id="gV4-6O-qxM"/>
+                <constraint firstItem="xGR-aE-APT" firstAttribute="leading" secondItem="afm-oE-gd5" secondAttribute="leading" constant="8" id="jDi-rl-19B"/>
+                <constraint firstAttribute="trailing" secondItem="HSS-1v-O5y" secondAttribute="trailing" constant="8" id="jLe-sh-s6J"/>
+                <constraint firstItem="HSS-1v-O5y" firstAttribute="leading" secondItem="afm-oE-gd5" secondAttribute="leading" constant="8" id="nDH-x8-9HF"/>
+                <constraint firstAttribute="trailing" secondItem="xGR-aE-APT" secondAttribute="trailing" constant="8" id="nwT-is-NsN"/>
+                <constraint firstItem="HSS-1v-O5y" firstAttribute="top" secondItem="xGR-aE-APT" secondAttribute="bottom" constant="10" id="tlM-p2-hfO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="877" y="145.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="wk2-we-7IK" userLabel="ViewFooterTable">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGH-Cz-Yep">
+                    <rect key="frame" x="8" y="6" width="304" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="A3f-BY-aj0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.98605549335479736" green="0.0" blue="0.069282554090023041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlx-qp-xlN" customClass="SMCustomButtonGrayColor">
+                    <rect key="frame" x="8" y="16" width="304" height="40"/>
+                    <color key="backgroundColor" red="0.20392156859999999" green="0.46274509800000002" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="P6g-Jt-oaf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="Continue To Synopsis Summary">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnBackToSummaryDidClicked:" destination="-1" eventType="touchUpInside" id="uN0-LS-WP7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yGH-Cz-Yep" firstAttribute="leading" secondItem="wk2-we-7IK" secondAttribute="leading" constant="8" id="CCG-hw-glC"/>
+                <constraint firstAttribute="trailing" secondItem="tlx-qp-xlN" secondAttribute="trailing" constant="8" id="Hzn-Bi-dBa"/>
+                <constraint firstItem="tlx-qp-xlN" firstAttribute="top" secondItem="yGH-Cz-Yep" secondAttribute="bottom" constant="-15" id="KDo-SW-GI8"/>
+                <constraint firstAttribute="bottom" secondItem="tlx-qp-xlN" secondAttribute="bottom" constant="31" id="nKv-wO-yhm"/>
+                <constraint firstAttribute="trailing" secondItem="yGH-Cz-Yep" secondAttribute="trailing" constant="8" id="nZX-vA-It7"/>
+                <constraint firstItem="yGH-Cz-Yep" firstAttribute="top" secondItem="wk2-we-7IK" secondAttribute="top" constant="6" id="o93-6j-kQS"/>
+                <constraint firstItem="tlx-qp-xlN" firstAttribute="leading" secondItem="wk2-we-7IK" secondAttribute="leading" constant="8" id="wsU-bl-JPJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="710" y="-122.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="down_arrowT" width="15" height="15"/>
+    </resources>
+</document>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="119" id="KGk-i7-Jjw" customClass="SMVINHistoryViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="118.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2010 Volkswagen Polo Hatch " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcd-AE-09Y">
+                        <rect key="frame" x="8" y="5" width="304" height="30.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrP-Yc-TrC">
+                        <rect key="frame" x="94" y="64.5" width="218" height="21"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="eYY-UK-Xx6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previously sold by-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLr-kd-SPs">
+                        <rect key="frame" x="8" y="97" width="304" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="oRU-Yu-pzM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iC4-s0-DtC">
+                        <rect key="frame" x="8" y="39.5" width="69" height="21"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="69" id="ISf-wK-3Ep"/>
+                            <constraint firstAttribute="height" constant="21" id="rs2-Pv-SCj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmc-uo-JX6">
+                        <rect key="frame" x="94" y="39.5" width="218" height="21"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="gOY-fc-Pz4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Engine" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSg-H2-5Ru">
+                        <rect key="frame" x="8" y="61.5" width="69" height="21"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="69" id="06g-vt-RDP"/>
+                            <constraint firstAttribute="height" constant="21" id="o9Y-0f-Lh0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VLr-kd-SPs" firstAttribute="top" secondItem="TrP-Yc-TrC" secondAttribute="bottom" constant="11.5" id="27V-ZV-Has"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="iC4-s0-DtC" secondAttribute="leading" id="30t-rg-AAQ"/>
+                    <constraint firstItem="dmc-uo-JX6" firstAttribute="top" secondItem="mcd-AE-09Y" secondAttribute="bottom" constant="4" id="8Pz-TV-n4J"/>
+                    <constraint firstItem="mcd-AE-09Y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="9oS-ON-6m2"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="TrP-Yc-TrC" secondAttribute="trailing" id="FH7-Qe-hTU"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VLr-kd-SPs" secondAttribute="trailing" id="K9n-zS-drS"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dmc-uo-JX6" secondAttribute="trailing" id="SQ4-yW-QFL"/>
+                    <constraint firstItem="TrP-Yc-TrC" firstAttribute="top" secondItem="dmc-uo-JX6" secondAttribute="bottom" constant="4" id="TQv-JQ-LrO"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="mcd-AE-09Y" secondAttribute="leading" id="Wul-5c-Wpl"/>
+                    <constraint firstItem="iC4-s0-DtC" firstAttribute="top" secondItem="mcd-AE-09Y" secondAttribute="bottom" constant="4" id="fBH-9v-IOR"/>
+                    <constraint firstItem="oSg-H2-5Ru" firstAttribute="top" secondItem="iC4-s0-DtC" secondAttribute="bottom" constant="1" id="hsE-qN-xqG"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="VLr-kd-SPs" secondAttribute="leading" id="lPz-aj-uIT"/>
+                    <constraint firstItem="dmc-uo-JX6" firstAttribute="leading" secondItem="iC4-s0-DtC" secondAttribute="trailing" constant="17" id="rLN-rn-uXs"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="mcd-AE-09Y" secondAttribute="trailing" id="s2V-Nh-6SX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="VLr-kd-SPs" secondAttribute="bottom" constant="-7.5" id="tLb-RK-LcS"/>
+                    <constraint firstItem="TrP-Yc-TrC" firstAttribute="leading" secondItem="oSg-H2-5Ru" secondAttribute="trailing" constant="17" id="x7r-VP-cje"/>
+                    <constraint firstItem="VLr-kd-SPs" firstAttribute="top" secondItem="oSg-H2-5Ru" secondAttribute="bottom" constant="14.5" id="xSx-GH-c7H"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="oSg-H2-5Ru" secondAttribute="leading" id="xrk-OZ-cWz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="VINNumberLabel" destination="dmc-uo-JX6" id="13s-PK-SRr"/>
+                <outlet property="engineNumberLabel" destination="TrP-Yc-TrC" id="uwr-iI-xws"/>
+                <outlet property="vechiclesNameLabel" destination="mcd-AE-09Y" id="FXF-rl-xxK"/>
+            </connections>
+            <point key="canvasLocation" x="364" y="-124.5"/>
+        </tableViewCell>
+    </objects>
+</document>

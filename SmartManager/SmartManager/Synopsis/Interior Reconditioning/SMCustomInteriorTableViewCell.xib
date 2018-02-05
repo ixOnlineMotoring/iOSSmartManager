@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SMCustomInteriorTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="759" text="Service Required " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Vzz-BY-siC">
+                        <rect key="frame" x="10" y="6" width="150" height="32"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="ETZ-71-mYf"/>
+                            <constraint firstAttribute="width" constant="150" id="UtU-yA-AWa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="R" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cRi-b0-P6d" customClass="SMCustomTextField">
+                        <rect key="frame" x="194" y="7" width="116" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="aZs-1d-O2z"/>
+                        </constraints>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HA-Ak-tZx">
+                        <rect key="frame" x="160" y="9" width="28" height="28"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="5AD-er-HDu"/>
+                            <constraint firstAttribute="width" constant="28" id="uSH-3Z-okf"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="uncheck_box">
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="selected" backgroundImage="check_box"/>
+                    </button>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVM-5v-R9X" customClass="SMCustomTextField">
+                        <rect key="frame" x="10" y="7" width="144" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="144" id="3bo-C7-2gP"/>
+                            <constraint firstAttribute="height" constant="30" id="f3h-Bf-tbh"/>
+                        </constraints>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                    </textField>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="6HA-Ak-tZx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="1oW-1o-hRE"/>
+                    <constraint firstItem="6HA-Ak-tZx" firstAttribute="leading" secondItem="LVM-5v-R9X" secondAttribute="trailing" constant="6" id="7Mh-Io-lB3"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cRi-b0-P6d" secondAttribute="trailing" constant="2" id="Fqp-tj-yks"/>
+                    <constraint firstItem="cRi-b0-P6d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="KEk-Uw-GIW"/>
+                    <constraint firstItem="LVM-5v-R9X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="RDM-Ji-lne"/>
+                    <constraint firstItem="Vzz-BY-siC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="Siw-ps-Mvl"/>
+                    <constraint firstItem="6HA-Ak-tZx" firstAttribute="leading" secondItem="Vzz-BY-siC" secondAttribute="trailing" id="Y31-fd-IDc"/>
+                    <constraint firstAttribute="topMargin" secondItem="LVM-5v-R9X" secondAttribute="top" constant="1" id="a8O-Oe-63h"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Vzz-BY-siC" secondAttribute="bottom" constant="-2.5" id="d4y-jO-fju"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="6HA-Ak-tZx" secondAttribute="bottom" constant="-1.5" id="gJa-dl-Kmc"/>
+                    <constraint firstItem="cRi-b0-P6d" firstAttribute="leading" secondItem="6HA-Ak-tZx" secondAttribute="trailing" constant="6" id="hzu-jb-nNq"/>
+                    <constraint firstItem="Vzz-BY-siC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-2" id="iS1-3b-bR1"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cRi-b0-P6d" secondAttribute="bottom" constant="-1.5" id="zLi-Ii-geb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="btnCheckBox" destination="6HA-Ak-tZx" id="kwQ-eD-uh1"/>
+                <outlet property="lblTitle" destination="Vzz-BY-siC" id="9Pz-bq-mkm"/>
+                <outlet property="txtFieldPrice" destination="cRi-b0-P6d" id="5se-jB-rSl"/>
+                <outlet property="txtFieldTitleInput" destination="LVM-5v-R9X" id="8GL-uK-zLr"/>
+            </connections>
+            <point key="canvasLocation" x="309" y="228"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="check_box" width="30" height="30"/>
+        <image name="uncheck_box" width="30" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

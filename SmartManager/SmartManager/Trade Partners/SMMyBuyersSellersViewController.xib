@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SMMyBuyersSellersViewController">
+            <connections>
+                <outlet property="lblHeadingTitle" destination="w95-vf-KaM" id="sw8-cb-sfj"/>
+                <outlet property="tblViewMyBuyersSellers" destination="zYO-dI-wBv" id="xRB-Vd-gZb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewFooter" destination="PAH-8P-TW0" id="t9m-hU-Oyg"/>
+                <outlet property="viewFooterEveryone" destination="2xD-oV-Yo3" id="Lo8-IS-gJk"/>
+                <outlet property="viewHeader" destination="m0C-58-iwf" id="JQ1-cK-MbR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zYO-dI-wBv">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="8rc-QT-aM0"/>
+                        <outlet property="delegate" destination="-1" id="qMK-NI-G80"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="zYO-dI-wBv" secondAttribute="bottom" id="RcP-Tt-zFg"/>
+                <constraint firstItem="zYO-dI-wBv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TU5-jD-FnO"/>
+                <constraint firstItem="zYO-dI-wBv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="URb-cY-QXb"/>
+                <constraint firstAttribute="trailing" secondItem="zYO-dI-wBv" secondAttribute="trailing" id="eM9-Hs-vHK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-278" y="-116"/>
+        </view>
+        <view contentMode="scaleToFill" id="m0C-58-iwf">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The following dealers, groups and OEMs have access to see, buy or bid on my trade vehicles-" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w95-vf-KaM" customClass="SMCustomLabelAutolayout">
+                    <rect key="frame" x="8" y="6" width="310" height="54"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="250" constant="62" id="cOV-qU-IpQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="w95-vf-KaM" secondAttribute="trailing" constant="2" id="2Sh-A3-3mG"/>
+                <constraint firstItem="w95-vf-KaM" firstAttribute="leading" secondItem="m0C-58-iwf" secondAttribute="leading" constant="8" id="Dh9-WO-mqU"/>
+                <constraint firstItem="w95-vf-KaM" firstAttribute="top" secondItem="m0C-58-iwf" secondAttribute="top" constant="6" id="Tth-OA-R5n"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-238" y="-601"/>
+        </view>
+        <view contentMode="scaleToFill" id="PAH-8P-TW0">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact support@ix.co.za for queries or changes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFB-2Q-MsS" customClass="SMCustomLabelAutolayout">
+                    <rect key="frame" x="8" y="12" width="304" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="0.26760841349999998" blue="0.1707353197" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eFB-2Q-MsS" firstAttribute="top" secondItem="PAH-8P-TW0" secondAttribute="top" constant="12" id="Ld0-OG-zsi"/>
+                <constraint firstAttribute="trailing" secondItem="eFB-2Q-MsS" secondAttribute="trailing" constant="8" id="PO8-Za-imW"/>
+                <constraint firstItem="eFB-2Q-MsS" firstAttribute="leading" secondItem="PAH-8P-TW0" secondAttribute="leading" constant="8" id="VsN-g6-lNP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-202" y="-476.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="2xD-oV-Yo3">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact support@ix.co.za for queries or changes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hnd-Ka-N7u" customClass="SMCustomLabelAutolayout">
+                    <rect key="frame" x="8" y="45" width="304" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="0.26760841349999998" blue="0.1707353197" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everyone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wi-Ne-fnM" customClass="SMCustomLabelAutolayout">
+                    <rect key="frame" x="8" y="20" width="132" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Hnd-Ka-N7u" firstAttribute="leading" secondItem="2xD-oV-Yo3" secondAttribute="leading" constant="8" id="PdT-NN-hVj"/>
+                <constraint firstAttribute="trailing" secondItem="Hnd-Ka-N7u" secondAttribute="trailing" constant="8" id="Rwd-N2-snh"/>
+                <constraint firstItem="0wi-Ne-fnM" firstAttribute="leading" secondItem="2xD-oV-Yo3" secondAttribute="leading" constant="8" id="gma-A3-5bJ"/>
+                <constraint firstItem="Hnd-Ka-N7u" firstAttribute="top" secondItem="0wi-Ne-fnM" secondAttribute="bottom" constant="7" id="jSm-r0-cid"/>
+                <constraint firstItem="0wi-Ne-fnM" firstAttribute="top" secondItem="2xD-oV-Yo3" secondAttribute="top" constant="20" id="opW-28-n7B"/>
+                <constraint firstAttribute="trailing" secondItem="0wi-Ne-fnM" secondAttribute="trailing" constant="180" id="ql1-kw-qTm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-175" y="-721"/>
+        </view>
+    </objects>
+</document>

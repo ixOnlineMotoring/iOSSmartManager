@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SMStockAuditVinDetailsViewController">
+            <connections>
+                <outlet property="collectionViewImages" destination="d9G-r1-YOv" id="WWN-Jd-5f7"/>
+                <outlet property="footerViewImages" destination="Qku-5T-tyI" id="qPJ-eu-oNY"/>
+                <outlet property="lblAlertText" destination="30D-JU-gA2" id="8JR-7l-4hl"/>
+                <outlet property="lblCountDown" destination="aDb-xY-QRf" id="wbE-Jv-OTM"/>
+                <outlet property="tblViewVinDetails" destination="fIK-d5-3Td" id="fHV-Sd-fhc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewHeader" destination="fyR-a6-XCa" id="set-sl-CYb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fIK-d5-3Td">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="oNU-yJ-pjB"/>
+                        <outlet property="delegate" destination="-1" id="8jQ-em-rOv"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fIK-d5-3Td" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1K2-PU-EaR"/>
+                <constraint firstAttribute="trailing" secondItem="fIK-d5-3Td" secondAttribute="trailing" id="HiJ-Ee-mAs"/>
+                <constraint firstItem="fIK-d5-3Td" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YUM-Gt-R2Y"/>
+                <constraint firstAttribute="bottom" secondItem="fIK-d5-3Td" secondAttribute="bottom" id="YuA-qx-kpj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="207" y="-278"/>
+        </view>
+        <view contentMode="scaleToFill" id="Qku-5T-tyI">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5D-CL-QBv">
+                    <rect key="frame" x="9" y="9" width="70" height="70"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="HzS-SA-FjQ"/>
+                        <constraint firstAttribute="width" constant="70" id="i5V-o3-nCx"/>
+                    </constraints>
+                    <state key="normal" image="plusicon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnAddImageDidClicked:" destination="-1" eventType="touchUpInside" id="HRB-VQ-lyd"/>
+                    </connections>
+                </button>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="d9G-r1-YOv">
+                    <rect key="frame" x="91" y="3" width="209" height="82"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="82" id="DrG-bc-N40"/>
+                    </constraints>
+                    <collectionViewLayout key="collectionViewLayout" id="9Pb-Li-XRs" customClass="LXReorderableCollectionViewFlowLayout"/>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="EoR-lF-J3J"/>
+                        <outlet property="delegate" destination="-1" id="ctt-rR-a6b"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXg-AZ-paH" customClass="SMCustomButtonBlue">
+                    <rect key="frame" x="7" y="144" width="304" height="40"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.21176470589999999" green="0.4431372549" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="jto-NF-VLS"/>
+                    </constraints>
+                    <state key="normal" title="Submit">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSaveDetailsDidClicked:" destination="-1" eventType="touchUpInside" id="7QP-rH-GHP"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30D-JU-gA2" customClass="SMCustomLable">
+                    <rect key="frame" x="9" y="82" width="291" height="49"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <string key="text">Note: Two images need to be added to the vehicle audit - 
+1. Front of the vehicle 
+2. Vehicle's license disc</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="r5D-CL-QBv" firstAttribute="leading" secondItem="Qku-5T-tyI" secondAttribute="leading" constant="9" id="BJk-gG-yhI"/>
+                <constraint firstItem="WXg-AZ-paH" firstAttribute="leading" secondItem="Qku-5T-tyI" secondAttribute="leading" constant="7" id="EO8-wf-OUO"/>
+                <constraint firstAttribute="trailing" secondItem="WXg-AZ-paH" secondAttribute="trailing" constant="9" id="Jt2-UI-7So"/>
+                <constraint firstItem="r5D-CL-QBv" firstAttribute="top" secondItem="Qku-5T-tyI" secondAttribute="top" constant="9" id="LAj-h1-QWM"/>
+                <constraint firstItem="d9G-r1-YOv" firstAttribute="top" secondItem="Qku-5T-tyI" secondAttribute="top" constant="3" id="PmC-ad-PjO"/>
+                <constraint firstItem="d9G-r1-YOv" firstAttribute="centerY" secondItem="r5D-CL-QBv" secondAttribute="centerY" id="ThP-C3-wEJ"/>
+                <constraint firstItem="d9G-r1-YOv" firstAttribute="leading" secondItem="r5D-CL-QBv" secondAttribute="trailing" constant="12" id="U6F-Ly-ht5"/>
+                <constraint firstItem="30D-JU-gA2" firstAttribute="leading" secondItem="Qku-5T-tyI" secondAttribute="leading" constant="9" id="bla-8L-I3Q"/>
+                <constraint firstItem="30D-JU-gA2" firstAttribute="top" secondItem="r5D-CL-QBv" secondAttribute="bottom" constant="3" id="nxM-9q-7KO"/>
+                <constraint firstAttribute="trailing" secondItem="30D-JU-gA2" secondAttribute="trailing" constant="20" id="poV-Yf-ZwZ"/>
+                <constraint firstAttribute="bottom" secondItem="WXg-AZ-paH" secondAttribute="bottom" constant="6" id="rKq-mL-obC"/>
+                <constraint firstAttribute="trailing" secondItem="d9G-r1-YOv" secondAttribute="trailing" constant="20" id="s3p-LZ-CgG"/>
+                <constraint firstItem="WXg-AZ-paH" firstAttribute="top" secondItem="d9G-r1-YOv" secondAttribute="bottom" constant="59" id="uO7-5P-Zzy"/>
+                <constraint firstItem="WXg-AZ-paH" firstAttribute="top" secondItem="30D-JU-gA2" secondAttribute="bottom" constant="13" id="vD6-Vq-xyR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="231" y="-1315.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="fyR-a6-XCa">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-xY-QRf" customClass="SMCustomLable">
+                    <rect key="frame" x="137" y="4" width="171" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.95686274510000002" green="0.31372549020000001" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="aDb-xY-QRf" secondAttribute="bottom" constant="4" id="7o1-9O-tH5"/>
+                <constraint firstItem="aDb-xY-QRf" firstAttribute="top" secondItem="fyR-a6-XCa" secondAttribute="top" constant="4" id="ILV-sZ-g4w"/>
+                <constraint firstItem="aDb-xY-QRf" firstAttribute="leading" secondItem="fyR-a6-XCa" secondAttribute="leading" constant="137" id="N0C-0H-yO9"/>
+                <constraint firstAttribute="trailing" secondItem="aDb-xY-QRf" secondAttribute="trailing" constant="12" id="x8i-8M-Yec"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="247" y="-1117.5"/>
+        </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wo images need to be clicked -  one of Front view of vehicle and the other  picture of the license disc" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xqW-ru-mgM" customClass="SMCustomLable">
+            <rect key="frame" x="0.0" y="0.0" width="291" height="38"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <animations/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="140.5" y="270"/>
+        </label>
+    </objects>
+    <resources>
+        <image name="plusicon" width="100" height="100"/>
+    </resources>
+</document>

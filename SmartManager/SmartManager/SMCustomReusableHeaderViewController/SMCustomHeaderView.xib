@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SMCustomHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xe-vy-mX2">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gU-K1-3HW">
+                    <rect key="frame" x="8" y="8" width="304" height="18"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mz-9q-xyo">
+                    <rect key="frame" x="8" y="34" width="304" height="18"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgD-po-xUM" customClass="SMCustomButtonGrayColor">
+                    <rect key="frame" x="8" y="60" width="304" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="bOa-RN-msh"/>
+                    </constraints>
+                    <state key="normal" title="Messages(4)">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnMessagesDidClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="4X0-hE-MrF"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrowT" translatesAutoresizingMaskIntoConstraints="NO" id="AvA-PT-CyY">
+                    <rect key="frame" x="284" y="65" width="20" height="20"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="cCe-KB-FE8"/>
+                        <constraint firstAttribute="height" constant="20" id="sA1-Ti-Afp"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <animations/>
+            <constraints>
+                <constraint firstItem="DgD-po-xUM" firstAttribute="top" secondItem="4mz-9q-xyo" secondAttribute="bottom" constant="8" id="3XW-r5-UlY"/>
+                <constraint firstItem="1xe-vy-mX2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3Xa-lk-VfQ"/>
+                <constraint firstAttribute="trailing" secondItem="4mz-9q-xyo" secondAttribute="trailing" constant="8" id="6af-gf-Mh3"/>
+                <constraint firstAttribute="trailing" secondItem="DgD-po-xUM" secondAttribute="trailing" constant="8" id="7ex-G5-sUo"/>
+                <constraint firstAttribute="bottom" secondItem="1xe-vy-mX2" secondAttribute="bottom" id="8v4-w3-XjW"/>
+                <constraint firstItem="AvA-PT-CyY" firstAttribute="top" secondItem="4mz-9q-xyo" secondAttribute="bottom" constant="13" id="9Vv-Ub-6TH"/>
+                <constraint firstItem="1xe-vy-mX2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9xZ-Ro-jdV"/>
+                <constraint firstAttribute="trailing" secondItem="7gU-K1-3HW" secondAttribute="trailing" constant="8" id="EIj-7x-sa7"/>
+                <constraint firstItem="4mz-9q-xyo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="L0T-Hd-SJh"/>
+                <constraint firstItem="7gU-K1-3HW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Mqn-NG-kdo"/>
+                <constraint firstItem="7gU-K1-3HW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="eFn-Aw-drg"/>
+                <constraint firstAttribute="bottom" secondItem="DgD-po-xUM" secondAttribute="bottom" priority="250" constant="8" id="fri-Sp-4Jx"/>
+                <constraint firstAttribute="trailing" secondItem="1xe-vy-mX2" secondAttribute="trailing" id="kL6-JM-gVU"/>
+                <constraint firstItem="DgD-po-xUM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="pa9-GB-MEf"/>
+                <constraint firstItem="4mz-9q-xyo" firstAttribute="top" secondItem="7gU-K1-3HW" secondAttribute="bottom" constant="8" id="vsU-Cm-MA1"/>
+                <constraint firstItem="AvA-PT-CyY" firstAttribute="leading" secondItem="1xe-vy-mX2" secondAttribute="trailing" constant="-36" id="vv8-2w-uxu"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnMessage" destination="DgD-po-xUM" id="tcv-jI-CYC"/>
+                <outlet property="imgViewArrow" destination="AvA-PT-CyY" id="OsF-r5-FSR"/>
+                <outlet property="lblFirst" destination="7gU-K1-3HW" id="Som-8P-LUH"/>
+                <outlet property="lblSecond" destination="4mz-9q-xyo" id="hyJ-0U-bSB"/>
+            </connections>
+            <point key="canvasLocation" x="366" y="-65"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="down_arrowT" width="15" height="15"/>
+    </resources>
+</document>

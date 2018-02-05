@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="dWN-PN-HaA" customClass="SMAppNotificationCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dWN-PN-HaA" id="Thx-5M-vyu">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lead 987653210" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAm-7V-DHC">
+                        <rect key="frame" x="9" y="6" width="130" height="21"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="8Ra-Jf-Ut2"/>
+                            <constraint firstAttribute="width" constant="130" id="HhS-9M-hiX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
+                        <color key="textColor" red="0.20392156859999999" green="0.46274509800000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Wed21Jan2017 4:46 pm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZI-1r-3Pj">
+                        <rect key="frame" x="146" y="6" width="166" height="21"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="HEW-ir-8tx"/>
+                            <constraint firstAttribute="width" constant="166" id="uJ9-aN-uBm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" text="fdfdsfds" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="coz-qx-lJg">
+                        <rect key="frame" x="4" y="35" width="304" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.20392156859999999" green="0.46274509800000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="MTu-uO-SAN"/>
+                        </constraints>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="13"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
+                    </textView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFp-K4-7gn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                        <color key="backgroundColor" white="1" alpha="0.37625456204379559" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="coz-qx-lJg" secondAttribute="trailing" constant="4" id="0cp-MF-haR"/>
+                    <constraint firstItem="coz-qx-lJg" firstAttribute="top" secondItem="eZI-1r-3Pj" secondAttribute="bottom" constant="8" id="9oP-vE-1T8"/>
+                    <constraint firstAttribute="trailing" secondItem="wFp-K4-7gn" secondAttribute="trailing" id="Dep-pG-hHs"/>
+                    <constraint firstAttribute="bottom" secondItem="wFp-K4-7gn" secondAttribute="bottom" constant="-0.5" id="Hi2-C7-VOJ"/>
+                    <constraint firstItem="eAm-7V-DHC" firstAttribute="top" secondItem="Thx-5M-vyu" secondAttribute="topMargin" constant="-2" id="J3f-EI-kwi"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="coz-qx-lJg" secondAttribute="bottom" constant="0.5" id="JOU-f7-j7f"/>
+                    <constraint firstItem="wFp-K4-7gn" firstAttribute="leading" secondItem="Thx-5M-vyu" secondAttribute="leading" id="S9g-ot-ETL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="eZI-1r-3Pj" secondAttribute="trailing" id="YpW-KW-Z2N"/>
+                    <constraint firstItem="eZI-1r-3Pj" firstAttribute="top" secondItem="Thx-5M-vyu" secondAttribute="topMargin" constant="-2" id="Zgf-gu-1tV"/>
+                    <constraint firstItem="wFp-K4-7gn" firstAttribute="top" secondItem="Thx-5M-vyu" secondAttribute="top" id="eaM-Re-QBG"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="coz-qx-lJg" secondAttribute="leading" constant="4" id="g2H-cn-F8D"/>
+                    <constraint firstItem="coz-qx-lJg" firstAttribute="top" secondItem="eAm-7V-DHC" secondAttribute="bottom" constant="8" id="m6w-MU-2jU"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="eAm-7V-DHC" secondAttribute="leading" constant="-1" id="mSR-ym-sgS"/>
+                    <constraint firstItem="eZI-1r-3Pj" firstAttribute="leading" secondItem="eAm-7V-DHC" secondAttribute="trailing" constant="7" id="rCa-Dd-Q8X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="lblDate" destination="eZI-1r-3Pj" id="I2y-Xa-KpO"/>
+                <outlet property="lblTitle" destination="eAm-7V-DHC" id="VOx-E6-8QG"/>
+                <outlet property="txtViewDescription" destination="coz-qx-lJg" id="lLL-W4-ICV"/>
+                <outlet property="viewTransparentBackground" destination="wFp-K4-7gn" id="PCA-Ys-Szu"/>
+            </connections>
+            <point key="canvasLocation" x="-65" y="104"/>
+        </tableViewCell>
+    </objects>
+</document>
