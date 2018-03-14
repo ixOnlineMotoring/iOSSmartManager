@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SMExteriorReconditioningViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="116" translatesAutoresizingMaskIntoConstraints="NO" id="o33-1d-DjP" customClass="SMCustomLabelAutolayout">
+                        <rect key="frame" x="8" y="7" width="164" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="164" id="WMF-U8-g8B"/>
+                            <constraint firstAttribute="height" constant="30" id="fQd-cX-P5d"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Iy-Zn-tsI">
+                        <rect key="frame" x="172" y="7" width="30" height="30"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="HEg-yj-k3k"/>
+                            <constraint firstAttribute="height" constant="30" id="lcD-Pg-daJ"/>
+                        </constraints>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" backgroundImage="uncheck_box">
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="selected" backgroundImage="check_box"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBa-Qs-ybC">
+                        <rect key="frame" x="204" y="6" width="81" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="oFw-2y-oJY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tY6-CW-UNe">
+                        <rect key="frame" x="287" y="6" width="30" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="9Ea-kO-cGK"/>
+                            <constraint firstAttribute="height" constant="30" id="GBi-PO-WDr"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="deleteImage">
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="tY6-CW-UNe" secondAttribute="trailing" constant="3" id="CS5-cc-475"/>
+                    <constraint firstItem="jBa-Qs-ybC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="EKD-Xc-k4e"/>
+                    <constraint firstItem="0Iy-Zn-tsI" firstAttribute="leading" secondItem="o33-1d-DjP" secondAttribute="trailing" id="EhQ-WE-lO4"/>
+                    <constraint firstAttribute="bottom" secondItem="tY6-CW-UNe" secondAttribute="bottom" constant="7.5" id="Jv6-yU-oE2"/>
+                    <constraint firstItem="o33-1d-DjP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="Ld0-hh-Fcx"/>
+                    <constraint firstItem="o33-1d-DjP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="SPO-SE-8vr"/>
+                    <constraint firstAttribute="bottom" secondItem="jBa-Qs-ybC" secondAttribute="bottom" constant="7.5" id="aJp-sZ-h5K"/>
+                    <constraint firstItem="tY6-CW-UNe" firstAttribute="leading" secondItem="jBa-Qs-ybC" secondAttribute="trailing" constant="2" id="aMd-hR-EqN"/>
+                    <constraint firstItem="0Iy-Zn-tsI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="bdQ-mJ-Vfg"/>
+                    <constraint firstAttribute="bottom" secondItem="o33-1d-DjP" secondAttribute="bottom" constant="6.5" id="gIr-HQ-LMy"/>
+                    <constraint firstAttribute="bottom" secondItem="0Iy-Zn-tsI" secondAttribute="bottom" constant="6.5" id="lgj-Yu-hXN"/>
+                    <constraint firstItem="jBa-Qs-ybC" firstAttribute="leading" secondItem="0Iy-Zn-tsI" secondAttribute="trailing" constant="2" id="m1E-jN-QMj"/>
+                    <constraint firstItem="tY6-CW-UNe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="ov0-35-4fW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="btnCheckBox" destination="0Iy-Zn-tsI" id="E12-jj-lhh"/>
+                <outlet property="btnDetete" destination="tY6-CW-UNe" id="NNs-nW-whx"/>
+                <outlet property="lblDetails" destination="o33-1d-DjP" id="Rbd-SK-NOT"/>
+                <outlet property="lblPrice" destination="jBa-Qs-ybC" id="w9g-Zn-8fQ"/>
+            </connections>
+            <point key="canvasLocation" x="307" y="279"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="check_box" width="30" height="30"/>
+        <image name="deleteImage" width="64" height="64"/>
+        <image name="uncheck_box" width="30" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

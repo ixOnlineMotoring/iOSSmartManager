@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="40" id="KGk-i7-Jjw" customClass="SMSMRealTimeOnlineViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="units excl(abnormal)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9r-bR-M0I" customClass="SMAutolayoutLightLabel">
+                        <rect key="frame" x="13" y="6" width="158" height="25"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Oac-Lg-5fF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3T4-hx-PsV" customClass="SMAutolayoutLightLabel">
+                        <rect key="frame" x="237" y="6" width="75" height="25"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="sjt-mx-x9e"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VUe-eH-6ub" customClass="SMAutolayoutLightLabel">
+                        <rect key="frame" x="159" y="6" width="75" height="25"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="WCT-VT-2Y5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="z9r-bR-M0I" firstAttribute="width" secondItem="VUe-eH-6ub" secondAttribute="width" constant="83" id="7H3-f1-0Og"/>
+                    <constraint firstItem="3T4-hx-PsV" firstAttribute="leading" secondItem="VUe-eH-6ub" secondAttribute="trailing" constant="3" id="7aT-Y8-3YJ"/>
+                    <constraint firstItem="3T4-hx-PsV" firstAttribute="width" secondItem="VUe-eH-6ub" secondAttribute="width" id="7n7-8B-tid"/>
+                    <constraint firstItem="3T4-hx-PsV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="C2K-b1-VQb"/>
+                    <constraint firstItem="z9r-bR-M0I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="Dwz-rx-A2B"/>
+                    <constraint firstItem="VUe-eH-6ub" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="KVW-OD-Crk"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="z9r-bR-M0I" secondAttribute="bottom" id="MC1-Dt-Otb"/>
+                    <constraint firstItem="z9r-bR-M0I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="PxC-Vs-5zL"/>
+                    <constraint firstAttribute="trailing" secondItem="3T4-hx-PsV" secondAttribute="trailing" constant="8" id="R6f-Rp-cqD"/>
+                    <constraint firstItem="VUe-eH-6ub" firstAttribute="leading" secondItem="z9r-bR-M0I" secondAttribute="trailing" constant="-12" id="gZf-Sf-atS"/>
+                    <constraint firstAttribute="bottom" secondItem="z9r-bR-M0I" secondAttribute="bottom" constant="12" id="vci-e4-60G"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="vci-e4-60G"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="lbl90Days" destination="3T4-hx-PsV" id="UOJ-5I-IaG"/>
+                <outlet property="lblRightNow" destination="VUe-eH-6ub" id="pfq-nM-rle"/>
+                <outlet property="lblTitle" destination="z9r-bR-M0I" id="MFQ-gd-KuS"/>
+            </connections>
+            <point key="canvasLocation" x="337" y="280"/>
+        </tableViewCell>
+    </objects>
+</document>

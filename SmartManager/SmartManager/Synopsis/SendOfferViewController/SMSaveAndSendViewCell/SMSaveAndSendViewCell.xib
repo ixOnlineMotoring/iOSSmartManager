@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="266" id="KGk-i7-Jjw" customClass="SMSaveAndSendViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="266"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="265.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V1V-Er-D9p" customClass="SMTableFooterView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="265"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send offer to-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VL7-bG-z4u" customClass="SMCustomLabelAutolayout">
+                                <rect key="frame" x="8" y="8" width="111" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="E8B-1y-Sm4"/>
+                                    <constraint firstAttribute="height" constant="20" id="nB2-Z1-EBI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lig-gA-get" customClass="SMCustomLabelAutolayout">
+                                <rect key="frame" x="8" y="41" width="41" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="kTI-hP-7fc"/>
+                                    <constraint firstAttribute="width" constant="41" id="tsY-5Q-iJ5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMS " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fq-bS-GIl" customClass="SMCustomLabelAutolayout">
+                                <rect key="frame" x="8" y="82" width="36" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="5QU-Ek-ISw"/>
+                                    <constraint firstAttribute="width" constant="36" id="mjy-kN-F8Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Separate multiples with semicolon(;)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Buy-Yg-8m4" customClass="SMCustomLabelAutolayout">
+                                <rect key="frame" x="8" y="176" width="297" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="5v6-xX-F90"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="12"/>
+                                <color key="textColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACD-16-xV7">
+                                <rect key="frame" x="50" y="36" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="c5e-IJ-ipp"/>
+                                    <constraint firstAttribute="height" constant="30" id="xvd-bu-QfL"/>
+                                </constraints>
+                                <state key="normal" image="uncheck_box"/>
+                                <state key="selected" image="check_box"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAm-Pa-fah">
+                                <rect key="frame" x="50" y="77" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0fg-04-dt7"/>
+                                    <constraint firstAttribute="width" constant="30" id="A5X-6R-yI1"/>
+                                </constraints>
+                                <state key="normal" image="uncheck_box"/>
+                                <state key="selected" image="check_box"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="huX-uo-dhi" customClass="SMCustomTextField">
+                                <rect key="frame" x="88" y="36" width="224" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="742-mQ-uL4"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NV9-9X-gqR" customClass="SMCustomTextField">
+                                <rect key="frame" x="88" y="76" width="224" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uAH-P7-qe2"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send copy to-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VB8-Sd-8lE" customClass="SMCustomLabelAutolayout">
+                                <rect key="frame" x="8" y="114" width="111" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="bAq-EE-oRV"/>
+                                    <constraint firstAttribute="width" constant="111" id="xUC-D8-5zK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFD-RM-DPZ" customClass="SMCustomLabelAutolayout">
+                                <rect key="frame" x="8" y="146" width="41" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="LB7-Wg-Up3"/>
+                                    <constraint firstAttribute="width" constant="41" id="fQM-7L-1du"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9s-Si-bL4">
+                                <rect key="frame" x="50" y="141" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AjF-Jl-UyD"/>
+                                    <constraint firstAttribute="width" constant="30" id="v44-ZN-hku"/>
+                                </constraints>
+                                <state key="normal" image="uncheck_box"/>
+                                <state key="selected" image="check_box"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nA3-xt-eod" customClass="SMCustomTextField">
+                                <rect key="frame" x="88" y="141" width="224" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hdf-WP-T2s"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLG-aN-23N" customClass="SMCustomButtonBlue">
+                                <rect key="frame" x="8" y="217" width="304" height="40"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.46274509800000002" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vL6-nj-tnq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <state key="normal" title="Save &amp; Send">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VL7-bG-z4u" firstAttribute="leading" secondItem="V1V-Er-D9p" secondAttribute="leading" constant="8" id="0sE-dX-eu9"/>
+                            <constraint firstItem="nA3-xt-eod" firstAttribute="top" secondItem="VB8-Sd-8lE" secondAttribute="bottom" constant="7" id="1JE-sR-Cw4"/>
+                            <constraint firstAttribute="trailing" secondItem="vLG-aN-23N" secondAttribute="trailing" constant="8" id="1ec-2N-WBh"/>
+                            <constraint firstItem="VB8-Sd-8lE" firstAttribute="top" secondItem="NV9-9X-gqR" secondAttribute="bottom" constant="8" id="3mj-ui-5fA"/>
+                            <constraint firstItem="ACD-16-xV7" firstAttribute="top" secondItem="VL7-bG-z4u" secondAttribute="bottom" constant="8" id="6kh-5O-Xs7"/>
+                            <constraint firstItem="Buy-Yg-8m4" firstAttribute="leading" secondItem="V1V-Er-D9p" secondAttribute="leading" constant="8" id="8Nq-1N-eAV"/>
+                            <constraint firstItem="VL7-bG-z4u" firstAttribute="top" secondItem="V1V-Er-D9p" secondAttribute="top" constant="8" id="A7b-Ko-YXN"/>
+                            <constraint firstItem="4Fq-bS-GIl" firstAttribute="leading" secondItem="V1V-Er-D9p" secondAttribute="leading" constant="8" id="CMo-dP-Ysj"/>
+                            <constraint firstAttribute="trailing" secondItem="Buy-Yg-8m4" secondAttribute="trailing" constant="15" id="DeZ-wN-Xq5"/>
+                            <constraint firstItem="fFD-RM-DPZ" firstAttribute="leading" secondItem="V1V-Er-D9p" secondAttribute="leading" constant="8" id="QCo-g5-Kc0"/>
+                            <constraint firstItem="VB8-Sd-8lE" firstAttribute="leading" secondItem="V1V-Er-D9p" secondAttribute="leading" constant="8" id="RMG-ld-5Dc"/>
+                            <constraint firstItem="lig-gA-get" firstAttribute="leading" secondItem="V1V-Er-D9p" secondAttribute="leading" constant="8" id="XXn-Pf-EYw"/>
+                            <constraint firstAttribute="trailing" secondItem="NV9-9X-gqR" secondAttribute="trailing" constant="8" id="YQ6-W7-hVj"/>
+                            <constraint firstItem="vLG-aN-23N" firstAttribute="leading" secondItem="V1V-Er-D9p" secondAttribute="leading" constant="8" id="a8J-Eg-QzC"/>
+                            <constraint firstAttribute="bottom" secondItem="vLG-aN-23N" secondAttribute="bottom" constant="8" id="ais-Ad-gd8"/>
+                            <constraint firstItem="vLG-aN-23N" firstAttribute="top" secondItem="Buy-Yg-8m4" secondAttribute="bottom" constant="21" id="bZN-wz-0EW"/>
+                            <constraint firstItem="h9s-Si-bL4" firstAttribute="leading" secondItem="fFD-RM-DPZ" secondAttribute="trailing" constant="1" id="dCg-qk-Dfi"/>
+                            <constraint firstItem="huX-uo-dhi" firstAttribute="top" secondItem="VL7-bG-z4u" secondAttribute="bottom" constant="8" id="dCo-hU-1AC"/>
+                            <constraint firstAttribute="trailing" secondItem="huX-uo-dhi" secondAttribute="trailing" constant="8" id="g71-wm-r7k"/>
+                            <constraint firstItem="huX-uo-dhi" firstAttribute="leading" secondItem="ACD-16-xV7" secondAttribute="trailing" constant="8" id="hbA-PD-DdN"/>
+                            <constraint firstItem="lig-gA-get" firstAttribute="top" secondItem="VL7-bG-z4u" secondAttribute="bottom" constant="13" id="iT7-Hy-CKB"/>
+                            <constraint firstItem="NV9-9X-gqR" firstAttribute="top" secondItem="huX-uo-dhi" secondAttribute="bottom" constant="10" id="ijt-oc-0op"/>
+                            <constraint firstItem="h9s-Si-bL4" firstAttribute="top" secondItem="VB8-Sd-8lE" secondAttribute="bottom" constant="7" id="lS3-mh-9xh"/>
+                            <constraint firstItem="4Fq-bS-GIl" firstAttribute="top" secondItem="lig-gA-get" secondAttribute="bottom" constant="21" id="leb-bg-AdB"/>
+                            <constraint firstAttribute="trailing" secondItem="nA3-xt-eod" secondAttribute="trailing" constant="8" id="oY4-YZ-lGS"/>
+                            <constraint firstItem="IAm-Pa-fah" firstAttribute="leading" secondItem="4Fq-bS-GIl" secondAttribute="trailing" constant="6" id="pa5-Py-NBD"/>
+                            <constraint firstItem="fFD-RM-DPZ" firstAttribute="top" secondItem="VB8-Sd-8lE" secondAttribute="bottom" constant="12" id="q93-cT-dqt"/>
+                            <constraint firstItem="nA3-xt-eod" firstAttribute="leading" secondItem="h9s-Si-bL4" secondAttribute="trailing" constant="8" id="qge-QO-Wfj"/>
+                            <constraint firstItem="NV9-9X-gqR" firstAttribute="leading" secondItem="IAm-Pa-fah" secondAttribute="trailing" constant="8" id="rFm-UZ-tv0"/>
+                            <constraint firstItem="ACD-16-xV7" firstAttribute="leading" secondItem="lig-gA-get" secondAttribute="trailing" constant="1" id="slo-hJ-X4m"/>
+                            <constraint firstItem="IAm-Pa-fah" firstAttribute="top" secondItem="ACD-16-xV7" secondAttribute="bottom" constant="11" id="uHV-W0-DeK"/>
+                            <constraint firstItem="Buy-Yg-8m4" firstAttribute="top" secondItem="nA3-xt-eod" secondAttribute="bottom" constant="5" id="ygA-rG-AsZ"/>
+                            <constraint firstItem="VB8-Sd-8lE" firstAttribute="top" secondItem="IAm-Pa-fah" secondAttribute="bottom" constant="7" id="zOj-7J-IcD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="V1V-Er-D9p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1Ju-1Q-pEA"/>
+                    <constraint firstAttribute="trailing" secondItem="V1V-Er-D9p" secondAttribute="trailing" id="LyK-5f-DKy"/>
+                    <constraint firstAttribute="bottom" secondItem="V1V-Er-D9p" secondAttribute="bottom" id="m5f-Mz-oRE"/>
+                    <constraint firstItem="V1V-Er-D9p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nI0-3m-Amo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnCheckBoxEmail" destination="ACD-16-xV7" id="qG9-xx-7Vx"/>
+                <outlet property="btnCheckBoxSms" destination="IAm-Pa-fah" id="kPW-Ry-onf"/>
+                <outlet property="btnCheckboxEmailCopyTo" destination="h9s-Si-bL4" id="W7e-y9-Fkz"/>
+                <outlet property="btnSaveAndSendOffer" destination="vLG-aN-23N" id="bCx-vV-cwO"/>
+                <outlet property="txtFieldEmailCopyTo" destination="nA3-xt-eod" id="Z9b-NR-G1c"/>
+                <outlet property="txtFieldSMS" destination="NV9-9X-gqR" id="euT-aC-ppd"/>
+            </connections>
+            <point key="canvasLocation" x="253" y="12"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="check_box" width="30" height="30"/>
+        <image name="uncheck_box" width="30" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

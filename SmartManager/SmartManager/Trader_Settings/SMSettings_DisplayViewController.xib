@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SMSettings_DisplayViewController">
+            <connections>
+                <outlet property="btnSaveDisplay" destination="uEj-fg-WyD" id="txW-Cg-aHH"/>
+                <outlet property="checkBoxAppraisal" destination="NAF-pB-MDt" id="P3V-Vx-8Uu"/>
+                <outlet property="checkBoxDaysinStock" destination="LdF-s3-dWH" id="Xms-e7-ukf"/>
+                <outlet property="checkBoxTradePrice" destination="tV2-ID-Xiz" id="Loh-d1-OEM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trade price breakdown" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Il7-9r-3P8" customClass="SMCustomLabelAutolayout">
+                    <rect key="frame" x="8" y="21" width="247" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="qPu-22-NjW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV2-ID-Xiz">
+                    <rect key="frame" x="287" y="18" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="28" id="tHI-4H-U8g"/>
+                        <constraint firstAttribute="height" constant="28" id="xsx-G2-qVz"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="uncheck_box">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="check_box"/>
+                    <connections>
+                        <action selector="checkBoxTradePriceDidClicked:" destination="-1" eventType="touchUpInside" id="hSA-EF-vX2"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days in stock" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXx-W6-UAk" customClass="SMCustomLabelAutolayout">
+                    <rect key="frame" x="8" y="57" width="247" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdF-s3-dWH">
+                    <rect key="frame" x="287" y="54" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="28" id="5aU-Pv-eYS"/>
+                        <constraint firstAttribute="height" constant="28" id="MSY-Ab-d18"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="uncheck_box">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="check_box"/>
+                    <connections>
+                        <action selector="checkBoxDaysInStockDidClicked:" destination="-1" eventType="touchUpInside" id="GXY-H6-jdL"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appraisal, if available" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEd-hd-DNT" customClass="SMCustomLabelAutolayout">
+                    <rect key="frame" x="8" y="93" width="247" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAF-pB-MDt">
+                    <rect key="frame" x="287" y="90" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="28" id="UMo-PA-IPo"/>
+                        <constraint firstAttribute="height" constant="28" id="cWw-aE-JKL"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="uncheck_box">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="check_box"/>
+                    <connections>
+                        <action selector="checkBoxAppraisalDidClicked:" destination="-1" eventType="touchUpInside" id="xyy-1k-dC2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEj-fg-WyD" customClass="SMCustomButtonBlue">
+                    <rect key="frame" x="8" y="134" width="304" height="40"/>
+                    <color key="backgroundColor" red="0.20392156859999999" green="0.46274509800000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="hyO-vv-Xzb">
+                            <variation key="heightClass=regular-widthClass=regular" constant="44"/>
+                        </constraint>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Save">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    </variation>
+                    <connections>
+                        <action selector="btnSaveDisplayDidClicked:" destination="-1" eventType="touchUpInside" id="H8W-fg-ARv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Il7-9r-3P8" firstAttribute="width" secondItem="zXx-W6-UAk" secondAttribute="width" id="5BT-qR-4hk"/>
+                <constraint firstAttribute="trailing" secondItem="NAF-pB-MDt" secondAttribute="trailing" constant="5" id="5DO-Gf-Cml"/>
+                <constraint firstItem="Il7-9r-3P8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="21" id="Dnc-FF-WdV"/>
+                <constraint firstAttribute="trailing" secondItem="LdF-s3-dWH" secondAttribute="trailing" constant="5" id="G7f-Pc-QBg"/>
+                <constraint firstItem="tV2-ID-Xiz" firstAttribute="leading" secondItem="Il7-9r-3P8" secondAttribute="trailing" constant="32" id="Gp3-S7-Nkz"/>
+                <constraint firstItem="HEd-hd-DNT" firstAttribute="height" secondItem="zXx-W6-UAk" secondAttribute="height" id="MRm-Dn-pQN"/>
+                <constraint firstItem="HEd-hd-DNT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="N6S-7R-GJ7"/>
+                <constraint firstAttribute="trailing" secondItem="tV2-ID-Xiz" secondAttribute="trailing" constant="5" id="Q0e-oZ-Q0O"/>
+                <constraint firstItem="tV2-ID-Xiz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="18" id="QXF-8h-xSq"/>
+                <constraint firstItem="uEj-fg-WyD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="R71-v2-cZc"/>
+                <constraint firstItem="LdF-s3-dWH" firstAttribute="top" secondItem="tV2-ID-Xiz" secondAttribute="bottom" constant="8" id="YoQ-Rh-zOH"/>
+                <constraint firstAttribute="trailing" secondItem="uEj-fg-WyD" secondAttribute="trailing" constant="8" id="Zdt-BP-e4O"/>
+                <constraint firstItem="uEj-fg-WyD" firstAttribute="top" secondItem="HEd-hd-DNT" secondAttribute="bottom" constant="20" id="dI3-Gd-LX6"/>
+                <constraint firstItem="zXx-W6-UAk" firstAttribute="top" secondItem="Il7-9r-3P8" secondAttribute="bottom" constant="15" id="hDa-gF-df7"/>
+                <constraint firstItem="HEd-hd-DNT" firstAttribute="width" secondItem="zXx-W6-UAk" secondAttribute="width" id="hnF-6k-Xc6"/>
+                <constraint firstItem="zXx-W6-UAk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="loB-Qp-AGI"/>
+                <constraint firstItem="Il7-9r-3P8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="np6-lD-IuO"/>
+                <constraint firstItem="NAF-pB-MDt" firstAttribute="leading" secondItem="HEd-hd-DNT" secondAttribute="trailing" constant="32" id="oIV-4s-L3W"/>
+                <constraint firstItem="Il7-9r-3P8" firstAttribute="height" secondItem="zXx-W6-UAk" secondAttribute="height" id="oXq-t9-GXx"/>
+                <constraint firstItem="NAF-pB-MDt" firstAttribute="top" secondItem="LdF-s3-dWH" secondAttribute="bottom" constant="8" id="oxL-so-iJt"/>
+                <constraint firstItem="HEd-hd-DNT" firstAttribute="top" secondItem="zXx-W6-UAk" secondAttribute="bottom" constant="15" id="rwo-Kb-iGp"/>
+                <constraint firstItem="LdF-s3-dWH" firstAttribute="leading" secondItem="zXx-W6-UAk" secondAttribute="trailing" constant="32" id="tsP-lI-S2U"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="371" y="266"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="check_box" width="30" height="30"/>
+        <image name="uncheck_box" width="30" height="30"/>
+    </resources>
+</document>
