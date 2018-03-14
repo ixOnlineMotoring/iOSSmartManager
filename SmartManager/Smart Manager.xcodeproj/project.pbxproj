@@ -6216,7 +6216,7 @@
 				ORGANIZATIONNAME = SmartManager;
 				TargetAttributes = {
 					62F2E97A19B6DA5A001767D8 = {
-						DevelopmentTeam = W3E95FJ4XY;
+						DevelopmentTeam = D86FA4Z8Q6;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -7230,9 +7230,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Smart Manager.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: iX Online Motoring";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: iX Online Motoring";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = W3E95FJ4XY;
+				DEVELOPMENT_TEAM = D86FA4Z8Q6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7266,10 +7266,10 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SmartManager.appSM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartmanager.smartmanagerQA;
 				PRODUCT_NAME = "Smart Manager";
-				PROVISIONING_PROFILE = "d0b840a4-448d-48ff-964b-e28abfeefcfa";
-				PROVISIONING_PROFILE_SPECIFIER = SMInhouseAdhocDist;
+				PROVISIONING_PROFILE = "7487c6c0-580d-44fc-9141-df54d781c216";
+				PROVISIONING_PROFILE_SPECIFIER = SmartManagerQA;
 				SWIFT_OBJC_BRIDGING_HEADER = "Smart Manager-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -7370,9 +7370,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Smart Manager.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: iX Online Motoring";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: iX Online Motoring";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = W3E95FJ4XY;
+				DEVELOPMENT_TEAM = D86FA4Z8Q6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7406,10 +7406,10 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SmartManager.appSM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartmanager.smartmanagerQA;
 				PRODUCT_NAME = "Smart Manager";
-				PROVISIONING_PROFILE = "d0b840a4-448d-48ff-964b-e28abfeefcfa";
-				PROVISIONING_PROFILE_SPECIFIER = SMInhouseAdhocDist;
+				PROVISIONING_PROFILE = "7487c6c0-580d-44fc-9141-df54d781c216";
+				PROVISIONING_PROFILE_SPECIFIER = SmartManagerQA;
 				SWIFT_OBJC_BRIDGING_HEADER = "Smart Manager-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -7428,10 +7428,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Smart Manager.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: iX Online Motoring";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: iX Online Motoring";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				DEVELOPMENT_TEAM = W3E95FJ4XY;
+				DEVELOPMENT_TEAM = D86FA4Z8Q6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7465,10 +7465,10 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SmartManager.appSM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartmanager.smartmanagerQA;
 				PRODUCT_NAME = "Smart Manager";
-				PROVISIONING_PROFILE = "d0b840a4-448d-48ff-964b-e28abfeefcfa";
-				PROVISIONING_PROFILE_SPECIFIER = SMInhouseAdhocDist;
+				PROVISIONING_PROFILE = "7487c6c0-580d-44fc-9141-df54d781c216";
+				PROVISIONING_PROFILE_SPECIFIER = SmartManagerQA;
 				SWIFT_OBJC_BRIDGING_HEADER = "Smart Manager-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
