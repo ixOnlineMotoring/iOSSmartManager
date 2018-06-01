@@ -840,8 +840,14 @@ enum gridData
         gridModuleObj = (SMGridModuleData*)[arrayOfSubModulePages objectAtIndex:indexPath.row];
     }
     
-   
-        moduleCell.lblModuleName.text = gridModuleObj.moduleName;
+        if ([gridModuleObj.moduleName isEqualToString:@"Photos &amp; Extras"])
+        {
+            moduleCell.lblModuleName.text = @"Photos & Extras";
+        }
+        else{
+            moduleCell.lblModuleName.text = gridModuleObj.moduleName;
+        }
+    
     
 
     if ([gridModuleObj.moduleName isEqualToString:@""] || [gridModuleObj.moduleName rangeOfString:@""].location !=NSNotFound)
@@ -969,7 +975,15 @@ enum gridData
 {
     if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone)
     {
-        return CGSizeMake(106, 106);
+        CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+        if (screenSize.height == 812)
+        {
+           return CGSizeMake(124, 124);
+            
+        }
+        else{
+          return CGSizeMake(106, 106);
+        }
     }
     else
     {
@@ -1631,11 +1645,14 @@ enum gridData
     }
     
     // For Vehicles - Added By Sandeep
-    else if ([moduleName isEqualToString:@"Photos & Extras"] || [moduleName isEqualToString:@"Edit Stock"] || [moduleName isEqualToString:@"List"])
+    
+    //Photos &amp; Extras
+    //Photos & Extras
+    else if ([moduleName isEqualToString:@"Photos &amp; Extras"] || [moduleName isEqualToString:@"Edit Stock"] || [moduleName isEqualToString:@"List"])
     {
         if([moduleName isEqualToString:@"Edit Stock"] || [strModuleName isEqualToString:@"List"])
             [SMGlobalClass sharedInstance].isListModule = YES;
-        else if([moduleName isEqualToString:@"Photos & Extras"])
+        else if([moduleName isEqualToString:@"Photos &amp; Extras"])
             [SMGlobalClass sharedInstance].isListModule = NO;
         
         SMPhotosAndExtrasListViewController *traderViewController;
@@ -2060,6 +2077,7 @@ enum gridData
 
 -(void)authenticationSucceeded
 {
+    dispatch_async(dispatch_get_main_queue(), ^{
     {
         
         NSLog(@"hash valueeeeeeeeeeee11111111 = %@",[SMGlobalClass sharedInstance].hashValue);
@@ -2096,6 +2114,7 @@ enum gridData
                  {
                      NSLog(@"errorrr = %@",error);
                  }];
+                
                 
             }
             else
@@ -2134,6 +2153,7 @@ enum gridData
             }
             
             /////    END
+            
         }
         
         
@@ -2203,6 +2223,7 @@ enum gridData
         [self.collectionViewModuleList reloadData];
         
     }
+    });
 }
 
 - (IBAction)lblHomeDidClicked:(id)sender
@@ -2721,15 +2742,10 @@ enum gridData
 
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAsset:(ALAsset *)asset
 {
-    
-    
-    
     [self dismissImagePickerControllerForCancel:NO];
 }
-
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAssets:(NSArray *)assets
 {
-    
     [self.multipleImagePicker.Originalimages removeAllObjects];// caught here
     
     
@@ -2738,8 +2754,10 @@ enum gridData
     
     for(ALAsset *asset in assets)
     {
+        @autoreleasepool {
         UIImage *img = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullResolutionImage]];
         UIImage *imgThumbnail = [UIImage imageWithCGImage:[asset thumbnail]];
+        
         
         NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
         
@@ -2752,7 +2770,7 @@ enum gridData
         [self saveeImage:img :imgName];
         
         [self.multipleImagePicker addOriginalImages:imgName];
-        
+        };
     }
     
     NSPredicate *predicateServerImages = [NSPredicate predicateWithFormat:@"isImageFromLocal == %d",NO];// from server

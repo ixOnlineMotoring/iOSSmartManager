@@ -373,15 +373,12 @@ NSArray  *arraySelectTeam;
     }
     
 }
-
-
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAsset:(ALAsset *)asset
 {
     
     [self dismissImagePickerControllerForCancel:NO];
     
 }
-
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAssets:(NSArray *)assets
 {
     
@@ -393,6 +390,7 @@ NSArray  *arraySelectTeam;
     
     for(ALAsset *asset in assets)
     {
+        @autoreleasepool {
         UIImage *img = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullResolutionImage]];
         UIImage *imgThumbnail = [UIImage imageWithCGImage:[asset thumbnail]];
         
@@ -407,7 +405,7 @@ NSArray  *arraySelectTeam;
         [self saveImage:img :imgName];
         
         [self.multipleImagePicker addOriginalImages:imgName];
-        
+        };
     }
     
     NSPredicate *predicateServerImages = [NSPredicate predicateWithFormat:@"isImageFromLocal == %d",NO];// from server
@@ -1497,7 +1495,8 @@ cellImages = [collectionView dequeueReusableCellWithReuseIdentifier:@"SMCellOfSu
                                                 dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
                                                     // Do something...
                                                     dispatch_async(dispatch_get_main_queue(), ^{
-                                                        SMAlert(@"Error", error.localizedDescription);
+                                                        SMAlert(@"Error",
+                                                                error.localizedDescription);
                                                         [self hideProgressHUD];
                                                         return;
                                                     });

@@ -3632,19 +3632,15 @@ bool isDataFoundinStockList = NO;
     }
     
 }
-
-
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAsset:(ALAsset *)asset
 {
-    
-    
-    
+
     [self dismissImagePickerControllerForCancel:NO];
 }
 
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAssets:(NSArray *)assets
 {
-    
+
     [self.multipleImagePicker.Originalimages removeAllObjects];// caught here
     
     
@@ -3653,8 +3649,8 @@ bool isDataFoundinStockList = NO;
     
     for(ALAsset *asset in assets)
     {
+        @autoreleasepool {
         UIImage *img = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullResolutionImage]];
-        
         NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
         
         [formatter setDateFormat:@"ddHHmmssSSS"];
@@ -3666,7 +3662,7 @@ bool isDataFoundinStockList = NO;
         [self saveeImage:img :imgName];
         
         [self.multipleImagePicker addOriginalImages:imgName];
-        
+        };
     }
     
     __weak typeof(self) weakSelf = self;

@@ -508,14 +508,10 @@
 
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAsset:(ALAsset *)asset
 {
-    
-    
     [self dismissImagePickerControllerForCancel:NO];
 }
-
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAssets:(NSArray *)assets
 {
-    
     [self.multipleImagePicker.Originalimages removeAllObjects];// caught here
     
     
@@ -524,6 +520,7 @@
     
     for(ALAsset *asset in assets)
     {
+        @autoreleasepool {
         UIImage *img = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullResolutionImage]];
         
         NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
@@ -537,7 +534,7 @@
         [self saveImage:img :imgName];
         
         [self.multipleImagePicker addOriginalImages:imgName];
-        
+        };
     }
     
     NSPredicate *predicateServerImages = [NSPredicate predicateWithFormat:@"isImageFromLocal == %d",NO];// from server
@@ -849,7 +846,8 @@
      NSURLSession *dataTaskSession ;
     [HUD show:YES];
      HUD.labelText = KLoaderText;
-    NSMutableURLRequest * requestURL = [SMWebServices saveExteriorReconditioning:userHash andExteriorTypeID:exteriorTypeID andIsRepair:isReplace andIsReplace:isRepair andPriceValue:priceValue andComments:comments andAppraisalID:appraisalID andClientID:clientID andVIN:vinNum];
+    NSMutableURLRequest * requestURL = [SMWebServices saveExteriorReconditioning:userHash
+                                                               andExteriorTypeID:exteriorTypeID andIsRepair:isReplace andIsReplace:isRepair andPriceValue:priceValue andComments:comments andAppraisalID:appraisalID andClientID:clientID andVIN:vinNum];
     
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     config.HTTPMaximumConnectionsPerHost = 1;

@@ -726,7 +726,7 @@
 {
     [imagePickerController deleteTheImageFromTheFirstLibrary:imageToBeDeleted];
 }
-*/
+
 -(void)delegateFunctionForDeselectingTheSelectedPhotos
 {
     [imagePickerController deSelectAllTheSelectedPhotosWhenCancelAction];
@@ -740,6 +740,7 @@
     
     
 }
+ */
 -(void)callToSelectImagesFromCameraWithRemainingCount:(int)remainingCount andFromEditScreen:(BOOL)isFromEditScreen
 {
     

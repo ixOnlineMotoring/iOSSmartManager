@@ -2664,9 +2664,7 @@ qualifiedName:(NSString *)qName
             isUpdateVehicleInformation == YES ? [self uploadingAddStockImages] : [self addvehicleInToStock];
             
         }
-        
     }
-    
 }
 
 -(IBAction)buttonSaveAndClosedDidPressed:(id)sender
@@ -2693,8 +2691,9 @@ qualifiedName:(NSString *)qName
 -(void)uploadingAddStockImages
 {
     
-        NSPredicate *predicateVideos = [NSPredicate predicateWithFormat:@"isImageFromLocal == %d",YES];
+       NSPredicate *predicateVideos = [NSPredicate predicateWithFormat:@"isImageFromLocal == %d",YES];
         arrayFilteredImages = [arrayOfImages filteredArrayUsingPredicate:predicateVideos];
+    
         if ([arrayFilteredImages count] > 0)
         {
             isPrioritiesImageChanged = YES;
@@ -2766,11 +2765,11 @@ qualifiedName:(NSString *)qName
         }
                
         
-            // this stuff is for updating the priorities
-        
-        for(int i=0;i<[arrayFilteredImages count];i++)
+        // this stuff is for updating the priorities
+        //Changed by Sakshi "Earlier array name was arrayFilteredImages"
+        for(int i=0;i<[arrayOfImages count];i++)
         {
-            SMPhotosListNSObject *imagesObject = (SMPhotosListNSObject*)[arrayFilteredImages objectAtIndex:i];
+            SMPhotosListNSObject *imagesObject = (SMPhotosListNSObject*)[arrayOfImages objectAtIndex:i];
             if(imagesObject.isImageFromLocal==NO)
             {
                 [self updateCommentTheImagePrioritiesWithPriority:i andImageID:imagesObject.imageID];
@@ -4290,12 +4289,14 @@ qualifiedName:(NSString *)qName
     
     else
     {
-        //        QBImagePickerController *imagePickerController2 = [[QBImagePickerController alloc] init];
+        //QBImagePickerController *imagePickerController2 = [[QBImagePickerController alloc] init];
+        
         if(imagePickerController == nil)
             imagePickerController = [[QBImagePickerController alloc] init];
         
         imagePickerController.delegate = self;
         imagePickerController.allowsMultipleSelection = YES;
+        
         
         
         if(remainingCount>20)
@@ -4337,7 +4338,6 @@ qualifiedName:(NSString *)qName
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:imagePickerController];
         [self presentViewController:navigationController animated:YES completion:NULL];
         
-        
     }
     
 }
@@ -4367,16 +4367,12 @@ qualifiedName:(NSString *)qName
     
 }
 
-
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAsset:(ALAsset *)asset
 {
-    
     [self dismissImagePickerControllerForCancel:NO];
 }
-
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAssets:(NSArray *)assets
 {
-    
     [self.multipleImagePicker.Originalimages removeAllObjects];// caught here
     
     
@@ -4385,8 +4381,10 @@ qualifiedName:(NSString *)qName
     
     for(ALAsset *asset in assets)
     {
+        @autoreleasepool {
         UIImage *img = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullResolutionImage]];
         UIImage *imgThumbnail = [UIImage imageWithCGImage:[asset thumbnail]];
+        
         
         NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
         
@@ -4399,7 +4397,7 @@ qualifiedName:(NSString *)qName
         [self saveImage:img :imgName];
         
         [self.multipleImagePicker addOriginalImages:imgName];
-        
+        };
     }
     
     NSPredicate *predicateServerImages = [NSPredicate predicateWithFormat:@"isImageFromLocal == %d",NO];// from server
@@ -5939,6 +5937,7 @@ qualifiedName:(NSString *)qName
     }
     
 }
+
 -(void)delegateFunctionWithOriginIndex:(int)originIndex
 {
     if(![SMGlobalClass sharedInstance].isFromCamera)
@@ -5952,9 +5951,6 @@ qualifiedName:(NSString *)qName
     
     
 }
-
-
-
 -(void)delegateFunction:(UIImage*)imageToBeDeleted
 {
     [imagePickerController deleteTheImageFromTheFirstLibrary:imageToBeDeleted];
@@ -5965,7 +5961,6 @@ qualifiedName:(NSString *)qName
     [imagePickerController deSelectAllTheSelectedPhotosWhenCancelAction];
     
 }
-
 #pragma mark - Videos load
 
 -(void)loadVideoToDatabase

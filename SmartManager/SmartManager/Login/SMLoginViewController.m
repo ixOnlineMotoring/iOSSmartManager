@@ -188,7 +188,7 @@
     {
         [self.view endEditing:YES];
         
-        [refreshData authenticateWithServerWithUsername:[self encodeString:self.txtFieldUserName.text] andPassword:self.txtFieldPassword.text];
+        [refreshData authenticateWithServerWithUsername:self.txtFieldUserName.text andPassword:self.txtFieldPassword.text];
     }
     
 }
@@ -228,15 +228,17 @@
 ////////////////////////End//////////////////
 -(void)authenticationSucceeded
 {
-    prefs = [NSUserDefaults standardUserDefaults];
-    [prefs setValue:self.txtFieldUserName.text forKey:@"UserName"];
-    [prefs setValue:self.txtFieldPassword.text forKey:@"Password"];
-    [prefs synchronize];
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"setTheTopHeaderData" object:nil];
-    [self dismissViewControllerAnimated:NO completion:^{
-        
-    }];
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"InitialRefreshForSideMenu" object:[SMGlobalClass sharedInstance].arrayOfModules];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setValue:self.txtFieldUserName.text forKey:@"UserName"];
+        [prefs setValue:self.txtFieldPassword.text forKey:@"Password"];
+        [prefs synchronize];
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"setTheTopHeaderData" object:nil];
+        [self dismissViewControllerAnimated:NO completion:^{
+            
+        }];
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"InitialRefreshForSideMenu" object:[SMGlobalClass sharedInstance].arrayOfModules];
+    });
 }
 
 
@@ -361,9 +363,6 @@
                                       otherButtonTitles:nil];
         [alertInternal show];
     }
-
-    
-    
 }
 
 - (IBAction)btnPhoneDidClicked:(id)sender

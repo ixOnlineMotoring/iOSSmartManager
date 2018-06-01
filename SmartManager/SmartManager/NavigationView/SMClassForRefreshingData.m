@@ -41,7 +41,7 @@ void(^ getThePushNotificationResponseCallBack)(NSString *pushNotificationUserId)
     HUD.labelText = KLoaderAuthenticate;
     [HUD show:YES];
     
-    NSString *str = password;
+   /* NSString *str = password;
     
     NSLog(@"password = %@",[str MD5]);
     NSMutableURLRequest *requestURL=[SMWebServices loginWithUsername:username andPassword:[str MD5]];
@@ -62,7 +62,6 @@ void(^ getThePushNotificationResponseCallBack)(NSString *pushNotificationUserId)
          }
          else
          {
-                      
             [SMGlobalClass sharedInstance].arrayOfModules = [[NSMutableArray alloc]init];
             [SMGlobalClass sharedInstance].arrayOfImpersonateClients = [[NSMutableArray alloc]init];
              xmlParser = [[NSXMLParser alloc] initWithData:data];
@@ -70,9 +69,52 @@ void(^ getThePushNotificationResponseCallBack)(NSString *pushNotificationUserId)
              [xmlParser setShouldResolveExternalEntities:YES];
              [xmlParser parse];
          }
-     }];
+     }];*/
+    strUserName = username;
+    strPassword = password;
+    [[UIApplication sharedApplication]setNetworkActivityIndicatorVisible:YES];
+    NSMutableURLRequest *requestURL=[SMWebServices loginWithUsername:username andPassword:password];
+    
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config
+                                             delegate:self
+                                        delegateQueue:nil];
+    NSURLSessionDataTask *dataTask =
+    [session dataTaskWithRequest:requestURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [[UIApplication sharedApplication]setNetworkActivityIndicatorVisible:NO];
+            });
+            if(response==nil){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.authenticateDelegate authenticationFailed];
+                });
+            }
+        });
+        
+        [SMGlobalClass sharedInstance].arrayOfModules = [[NSMutableArray alloc]init];
+        [SMGlobalClass sharedInstance].arrayOfImpersonateClients = [[NSMutableArray alloc]init];
+        xmlParser = [[NSXMLParser alloc] initWithData:data];
+        [xmlParser setDelegate: self];
+        [xmlParser setShouldResolveExternalEntities:YES];
+        [xmlParser parse];
+    }];
+    
+    [dataTask resume];
 }
-
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler
+{
+    if (challenge.previousFailureCount > 0) {
+        [HUD hide:YES];
+        
+        completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
+    }else {
+        NSURLCredential *credential = [NSURLCredential credentialWithUser:strUserName
+                                                                 password:strPassword
+                                                              persistence:NSURLCredentialPersistenceForSession];
+        completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
+    }
+}
 
 - (NSString *)extractString:(NSString *)fullString toLookFor:(NSString *)lookFor skipForwardX:(NSInteger)skipForward toStopBefore:(NSString *)stopBefore
 {
@@ -93,8 +135,10 @@ void(^ getThePushNotificationResponseCallBack)(NSString *pushNotificationUserId)
    
     
      NSMutableURLRequest *requestURL = [SMWebServices SaveDeviceTokenOfOneSignalWithUserHash:[SMGlobalClass sharedInstance].hashValue andCodeType:2 andDeviceCode:deviceCode];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[UIApplication sharedApplication]setNetworkActivityIndicatorVisible:YES];
+    });
     
-    [[UIApplication sharedApplication]setNetworkActivityIndicatorVisible:YES];
     
     [NSURLConnection sendAsynchronousRequest:requestURL
                                        queue:[NSOperationQueue mainQueue]
@@ -126,6 +170,9 @@ void(^ getThePushNotificationResponseCallBack)(NSString *pushNotificationUserId)
 // The first method to implement is parser:didStartElement:namespaceURI:qualifiedName:attributes:, which is fired when the start tag of an element is found:
 
 //---when the start of an element is found---
+- (void)parserDidStartDocument:(NSXMLParser *)parser{
+    NSLog(@"%@",parser);
+}
 
 -(void) parser:(NSXMLParser *) parser
 didStartElement:(NSString *) elementName
@@ -134,14 +181,14 @@ didStartElement:(NSString *) elementName
 attributes:(NSDictionary *) attributeDict
 {
    
-     prefs = [NSUserDefaults standardUserDefaults];
+    prefs = [NSUserDefaults standardUserDefaults];
 
-    if ([elementName isEqualToString:@"a:IsAuthenticated"])
+    if ([elementName isEqualToString:@"IsAuthenticated"])
     {
         isAuthenticated = YES;
     }
     
-    if ([elementName isEqualToString:@"a:FailureReason"])
+    if ([elementName isEqualToString:@"FailureReason"])
     {
         isFailureReason = YES;
     }
@@ -233,6 +280,7 @@ attributes:(NSDictionary *) attributeDict
         
         if(self.moduleObj!=nil)
         {
+            
             self.moduleObj.moduleName = [attributeDict valueForKey:@"Name"];
             NSLog(@"ModuleNamee = %@",self.moduleObj.moduleName);
             
@@ -377,12 +425,11 @@ attributes:(NSDictionary *) attributeDict
     {
         if(self.modulePageObj!=nil)
         {
-            
-            
             if([string isEqualToString:@"Customer Delivery"])
                 string = @"Delivery";
             
             self.modulePageObj.moduleName = [NSString stringWithFormat:@"%@%@",self.modulePageObj.moduleName,string];
+            [self.modulePageObj.moduleName stringByReplacingOccurrencesOfString:@"&amp;" withString:@"&"];
             NSLog(@"CHECK THIS = %@",self.modulePageObj.moduleName);
         }
         
@@ -411,15 +458,14 @@ didEndElement:(NSString *)elementName
  namespaceURI:(NSString *)namespaceURI
 qualifiedName:(NSString *)qName
 {
-    NSLog(@"fgfgfgfgfg");
+    NSLog(@"%@",elementName);
     prefs = [NSUserDefaults standardUserDefaults];
     
-    if ([elementName isEqualToString:@"a:IsAuthenticated"])
+    if ([elementName isEqualToString:@"IsAuthenticated"])
     {
         
         if([AuthenticatedValue isEqualToString:@"false"])
         {
-            
             [self.authenticateDelegate authenticationFailed];
         }
         else
@@ -447,6 +493,7 @@ qualifiedName:(NSString *)qName
                 
         [prefs synchronize];
                 
+                
         }
         else
         {
@@ -455,13 +502,15 @@ qualifiedName:(NSString *)qName
         }
          
             // oneSignal Setup
+            dispatch_async(dispatch_get_main_queue(), ^{
+                id oneSignal = [(SMAppDelegate *)[[UIApplication sharedApplication] delegate] oneSignal];
+                
+                [oneSignal IdsAvailable:^(NSString* userId, NSString* pushToken) {
+                    NSLog(@"UserId:%@", userId);
+                    [self webserviceForSavingDeviceCodeFromOneSignalWithDeviceCode:userId];
+                }];
+            });
             
-            id oneSignal = [(SMAppDelegate *)[[UIApplication sharedApplication] delegate] oneSignal];
-            
-                        [oneSignal IdsAvailable:^(NSString* userId, NSString* pushToken) {
-                NSLog(@"UserId:%@", userId);
-                [self webserviceForSavingDeviceCodeFromOneSignalWithDeviceCode:userId];
-            }];
             
 
                 // Background imageUploading from database
@@ -476,7 +525,10 @@ qualifiedName:(NSString *)qName
                 NSLog(@"int **** wifi ****");
                 [self carryOutTheBackgroundUploadingofStoredImages];
             }
-            else if (remoteHostStatus == ReachableViaWWAN) {NSLog(@"init **** cell ****"); }
+            else if (remoteHostStatus == ReachableViaWWAN) {
+                NSLog(@"init **** cell ****");
+                
+            }
             
 
     }
@@ -484,7 +536,7 @@ qualifiedName:(NSString *)qName
     }
     //////////////////////////Monami/////////////////////////////////////////////
     ///////////Get Failure message from login screen after authentication comes true
-    else if([elementName isEqualToString:@"a:FailureReason"]){
+    else if([elementName isEqualToString:@"FailureReason"]){
         
         if(AuthenticatedValue != nil ){
         if(![currentNodeContent isEqualToString:@""]){

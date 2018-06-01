@@ -1284,11 +1284,11 @@ static NSString *cellIdentifier= @"CommentsVPCellIdentifier";
     [self dismissImagePickerControllerForCancel:NO];
     
 }
-
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAssets:(NSArray *)assets
 {
+
     
-        [self.multipleImagePicker.Originalimages removeAllObjects];// caught here
+    [self.multipleImagePicker.Originalimages removeAllObjects];// caught here
     
     
     assetsArray = [NSArray arrayWithArray:assets];
@@ -1296,8 +1296,9 @@ static NSString *cellIdentifier= @"CommentsVPCellIdentifier";
     
     for(ALAsset *asset in assets)
     {
+        @autoreleasepool {
         UIImage *img = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullResolutionImage]];
-            UIImage *imgThumbnail = [UIImage imageWithCGImage:[asset thumbnail]];
+        UIImage *imgThumbnail = [UIImage imageWithCGImage:[asset thumbnail]];
         
         NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
         
@@ -1310,7 +1311,7 @@ static NSString *cellIdentifier= @"CommentsVPCellIdentifier";
         [self saveImage:img :imgName];
         
         [self.multipleImagePicker addOriginalImages:imgName];
-     
+        };
     }
     
     NSPredicate *predicateServerImages = [NSPredicate predicateWithFormat:@"isImageFromLocal == %d",NO];// from server

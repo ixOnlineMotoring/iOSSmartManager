@@ -1140,17 +1140,14 @@ int imgCount=0;
     
 }
 
-
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAsset:(ALAsset *)asset
 {
-    
-   
-    
     [self dismissImagePickerControllerForCancel:NO];
 }
 
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAssets:(NSArray *)assets
 {
+        
     
     [self.multipleImagePicker.Originalimages removeAllObjects];// caught here
     
@@ -1160,8 +1157,10 @@ int imgCount=0;
     
     for(ALAsset *asset in assets)
     {
+        @autoreleasepool {
         UIImage *img = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullResolutionImage]];
         UIImage *imgThumbnail = [UIImage imageWithCGImage:[asset thumbnail]];
+        
         
         NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
         
@@ -1174,7 +1173,7 @@ int imgCount=0;
         [self saveImage:img :imgName];
         
         [self.multipleImagePicker addOriginalImages:imgName];
-        
+        };
     }
     
     NSPredicate *predicateServerImages = [NSPredicate predicateWithFormat:@"isImageFromLocal == %d",NO];// from server

@@ -24,7 +24,7 @@
 #define WEB_SERVICE_TEMPURI                 @"http://tempuri.org"
 
 
-#define WEB_SERVICE_LIVE @"ix.co.za"
+#define WEB_SERVICE_LIVE @"ix.co.za" //ix.co.za //ixssl.co.za
 #define WEB_SERVICE_STAGING @"ixstaging.co.za"
 //#define WEB_SERVICE_LIVE @"qa.ix.co.za"
 
@@ -42,8 +42,9 @@
 
 +(NSString*)authenticateWebserviceUrl
 {
+    //return [NSString stringWithFormat:@"http://p4.authentication.%@/Authenticate.svc",WEB_SERVICE_LIVE];
+    return @"https://authenticationapi.ixssl.co.za/api/Login";
     
-    return [NSString stringWithFormat:@"http://p4.authentication.%@/Authenticate.svc",WEB_SERVICE_LIVE];
 }
 +(NSString *) activeSpecailListingImage
 {
@@ -75,7 +76,8 @@
 +(NSString *)leadWebService
 {
     
-    return [NSString stringWithFormat:@"http://lead.%@/LeadService.svc",WEB_SERVICE_LIVE];
+    return [NSString stringWithFormat:@"http://leadservicenew.%@/LeadService.svc?singleWsdl",WEB_SERVICE_LIVE];
+    //return [NSString stringWithFormat:@"http://lead.%@/LeadService.svc",WEB_SERVICE_LIVE];
 }
 
 +(NSString *)eBrochureWebService
@@ -127,8 +129,7 @@
 }
 
 #pragma mark - Login Web Service
-
-+(NSMutableURLRequest*)loginWithUsername:(NSString*)userName andPassword:(NSString*)password
+/*+(NSMutableURLRequest*)loginWithUsername:(NSString*)userName andPassword:(NSString*)password
 {
     NSString *soapMessage = [NSString stringWithFormat:
                              @"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
@@ -152,8 +153,15 @@
     [request setHTTPBody: [soapMessage dataUsingEncoding:NSUTF8StringEncoding]];
     
     return request;
+}*/
+#pragma mark - New Login Web API using digest authentication
++(NSMutableURLRequest*)loginWithUsername:(NSString*)userName andPassword:(NSString*)password
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[self authenticateWebserviceUrl]]];
+    [request addValue:@"application/xml; charset=utf-8" forHTTPHeaderField:@"accept"];
+    [request setHTTPMethod:@"GET"];
+    return request;
 }
-
 +(NSMutableURLRequest*)SaveDeviceTokenOfOneSignalWithUserHash:(NSString*)userHash andCodeType:(int)codeType andDeviceCode:(NSString*) deviceCode
 {
     NSString *soapMessage = [NSString stringWithFormat:

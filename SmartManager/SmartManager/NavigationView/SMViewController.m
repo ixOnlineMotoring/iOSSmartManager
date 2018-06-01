@@ -104,34 +104,39 @@
 
 -(void)setTheTopHeaderData
 {
-    prefs = [NSUserDefaults standardUserDefaults];
-    
-    self.lblUserName.text = [NSString stringWithFormat:@"%@ %@",[prefs valueForKey:@"Name"],[prefs valueForKey:@"Surname"]];
-    
-    CGSize fontSizeUserName = [self.lblUserName.text sizeWithAttributes:@{NSFontAttributeName:self.lblUserName.font}];
-
-    if( fontSizeUserName.width<=165)
-    {
-        self.btnDownArrow.frame = CGRectMake(self.lblUserName.frame.origin.x+fontSizeUserName.width+5.0, self.btnDownArrow.frame.origin.y, self.btnDownArrow.frame.size.width, self.btnDownArrow.frame.size.height);
-    }
-
-    self.lblCount.text = [prefs valueForKey:@"ClientID"];
-    self.lblClientName.text = [prefs valueForKey:@"ClientName"];
-    
-    CGSize fontSizeClientName = [self.lblClientName.text sizeWithAttributes:@{NSFontAttributeName:self.lblClientName.font}];
-
-    if(fontSizeClientName.width<=165)
-    {
-        self.lblClientName.frame = CGRectMake(self.lblClientName.frame.origin.x, self.lblClientName.frame.origin.y, fontSizeClientName.width, self.lblClientName.frame.size.height);
-
-        self.lblCount.frame = CGRectMake(self.lblClientName.frame.origin.x+fontSizeClientName.width+5.0, self.lblCount.frame.origin.y, self.lblCount.frame.size.width, self.lblCount.frame.size.height);
-    }
-    else
-    {
-        self.lblClientName.frame = CGRectMake(self.lblClientName.frame.origin.x, self.lblClientName.frame.origin.y, 165, self.lblClientName.frame.size.height);
+    dispatch_async(dispatch_get_main_queue(), ^{
+       
+        prefs = [NSUserDefaults standardUserDefaults];
         
-        self.lblCount.frame = CGRectMake(self.lblClientName.frame.origin.x+self.lblClientName.frame.size.width, self.lblCount.frame.origin.y, self.lblCount.frame.size.width, self.lblCount.frame.size.height);
-    }
+        self.lblUserName.text = [NSString stringWithFormat:@"%@ %@",[prefs valueForKey:@"Name"],[prefs valueForKey:@"Surname"]];
+        
+        CGSize fontSizeUserName = [self.lblUserName.text sizeWithAttributes:@{NSFontAttributeName:self.lblUserName.font}];
+        
+        if( fontSizeUserName.width<=165)
+        {
+            self.btnDownArrow.frame = CGRectMake(self.lblUserName.frame.origin.x+fontSizeUserName.width+5.0, self.btnDownArrow.frame.origin.y, self.btnDownArrow.frame.size.width, self.btnDownArrow.frame.size.height);
+        }
+        
+        self.lblCount.text = [prefs valueForKey:@"ClientID"];
+        self.lblClientName.text = [prefs valueForKey:@"ClientName"];
+        
+        CGSize fontSizeClientName = [self.lblClientName.text sizeWithAttributes:@{NSFontAttributeName:self.lblClientName.font}];
+        
+        if(fontSizeClientName.width<=165)
+        {
+            self.lblClientName.frame = CGRectMake(self.lblClientName.frame.origin.x, self.lblClientName.frame.origin.y, fontSizeClientName.width, self.lblClientName.frame.size.height);
+            
+            self.lblCount.frame = CGRectMake(self.lblClientName.frame.origin.x+fontSizeClientName.width+5.0, self.lblCount.frame.origin.y, self.lblCount.frame.size.width, self.lblCount.frame.size.height);
+        }
+        else
+        {
+            self.lblClientName.frame = CGRectMake(self.lblClientName.frame.origin.x, self.lblClientName.frame.origin.y, 165, self.lblClientName.frame.size.height);
+            
+            self.lblCount.frame = CGRectMake(self.lblClientName.frame.origin.x+self.lblClientName.frame.size.width, self.lblCount.frame.origin.y, self.lblCount.frame.size.width, self.lblCount.frame.size.height);
+        }
+        
+    });
+    
 }
 
 // the delegate is not set and called from here.. Its set and called from SMNavigationController class. we call the method by adding a target to the button - selector for the method that need to be implemented in the target class(in this case GridViewController class).

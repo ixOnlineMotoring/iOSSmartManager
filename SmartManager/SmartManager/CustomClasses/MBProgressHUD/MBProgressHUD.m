@@ -348,8 +348,10 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		} else if (animationType == MBProgressHUDAnimationZoomOut) {
 			self.transform = CGAffineTransformConcat(rotationTransform, CGAffineTransformMakeScale(0.5f, 0.5f));
 		}
-
-		self.alpha = 0.02f;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.alpha = 0.02f;
+        });
+		
 		[UIView commitAnimations];
 	}
 	else {
@@ -365,7 +367,10 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 
 - (void)done {
 	isFinished = YES;
-	self.alpha = 0.0f;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.alpha = 0.0f;
+    });
+	
 	if (removeFromSuperViewOnHide) {
 		[self removeFromSuperview];
 	}

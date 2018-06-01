@@ -276,7 +276,7 @@
     NSString *documentDirectory = [paths objectAtIndex:0];
     
     NSString *fullPathOfImage = [documentDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@", imageName1]];
-    // NSLog(@"full path of IMGG = %@",fullPathOftheImage);
+    NSLog(@"full path of IMGG = %@",fullPathOftheImage);
     return [UIImage imageWithContentsOfFile:fullPathOfImage];
     
 }

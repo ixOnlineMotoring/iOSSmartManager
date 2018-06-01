@@ -333,7 +333,7 @@ QBAssetsCollectionViewController *assetsCollectionViewController;
     for (NSURL *selectedAssetURL in self.selectedAssetURLs) {
         __weak typeof(self) weakSelf = self;
         
-        NSLog(@"selectedAssetURL:%@",selectedAssetURL);
+        //NSLog(@"selectedAssetURL:%@",selectedAssetURL);
         [self.assetsLibrary assetForURL:selectedAssetURL
                             resultBlock:^(ALAsset *asset)
                             {

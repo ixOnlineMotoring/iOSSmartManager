@@ -25,7 +25,7 @@
 @end
 
 
-@interface SMClassForRefreshingData : NSObject<NSXMLParserDelegate,MBProgressHUDDelegate,NSURLSessionDelegate,NSURLSessionTaskDelegate>
+@interface SMClassForRefreshingData : NSObject<NSXMLParserDelegate,MBProgressHUDDelegate,NSURLSessionDelegate,NSURLSessionTaskDelegate,NSURLSessionDataDelegate>
 {
     NSUserDefaults *prefs;
     
@@ -63,7 +63,8 @@
     NSArray *filteredArrayForDashBoard;
     NSArray *filteredArrayForBottomBar;
     
-   
+    NSString *strUserName;
+    NSString *strPassword;
     NSMutableArray *dashBoardArray;
     NSMutableArray *bottomBarArray;
     NSMutableArray *arrmStoredImages;

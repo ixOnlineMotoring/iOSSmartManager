@@ -50,7 +50,7 @@
     {
         fontID = 128;
     }
-    else if ([strModuleName isEqualToString:@"Photos & Extras"])
+    else if ([strModuleName isEqualToString:@"Photos &amp; Extras"])
     {
          fontID = 91;
     }
