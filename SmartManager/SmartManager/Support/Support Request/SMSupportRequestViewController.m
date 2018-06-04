@@ -113,6 +113,7 @@ NSArray  *arraySelectTeam;
     [imagePickerController deSelectAllTheSelectedPhotosWhenCancelAction];
 }
 
+
 -(void)dismissTheLoader
 {
     [imagePickerController dismissTheLoaderAction];

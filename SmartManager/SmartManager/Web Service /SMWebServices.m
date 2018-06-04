@@ -42,9 +42,11 @@
 
 +(NSString*)authenticateWebserviceUrl
 {
-    //return [NSString stringWithFormat:@"http://p4.authentication.%@/Authenticate.svc",WEB_SERVICE_LIVE];
+    return [NSString stringWithFormat:@"http://p4.authentication.%@/Authenticate.svc",WEB_SERVICE_LIVE];
+}
++(NSString*)authenticateWebserviceUrlNewLogin
+{
     return @"https://authenticationapi.ixssl.co.za/api/Login";
-    
 }
 +(NSString *) activeSpecailListingImage
 {
@@ -157,7 +159,7 @@
 #pragma mark - New Login Web API using digest authentication
 +(NSMutableURLRequest*)loginWithUsername:(NSString*)userName andPassword:(NSString*)password
 {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[self authenticateWebserviceUrl]]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[self authenticateWebserviceUrlNewLogin]]];
     [request addValue:@"application/xml; charset=utf-8" forHTTPHeaderField:@"accept"];
     [request setHTTPMethod:@"GET"];
     return request;
@@ -8908,12 +8910,13 @@
                              "<Body>"
                              "<LogNewSupportRequest xmlns=\"%@/\">"
                              "<userHash>%@</userHash>"
+                             "<clientID>%d</clientID>"
                              "<ticketType>%d</ticketType>"
                              "<ticketTitle>%@</ticketTitle>"
                              "<ticketDetails>%@</ticketDetails>"
                              "</LogNewSupportRequest>"
                              "</Body>"
-                             "</Envelope>",WEB_SERVICE_TEMPURI,userHash,requestID,requestTitle,requestDetails];
+                             "</Envelope>",WEB_SERVICE_TEMPURI,userHash,[SMGlobalClass sharedInstance].strClientID.intValue,requestID,requestTitle,requestDetails];
     
     NSLog(@"RequestType request = %@",soapMessage);
     

@@ -84,12 +84,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartManager/HomeGridView/SMGridViewViewController.m"
-            timestampString = "549547761.34024"
+            timestampString = "549803263.15718"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2068"
             endingLineNumber = "2068"
             landmarkName = "-authenticationFailed"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartManager/HomeGridView/SMGridViewViewController.m"
+            timestampString = "549803263.15774"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2983"
+            endingLineNumber = "2983"
+            landmarkName = "-updateProfileImageApiCall:andBase64:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartManager/Web Service /SMWebServices.m"
+            timestampString = "549808759.634239"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8921"
+            endingLineNumber = "8921"
+            landmarkName = "+logNewSupportRequestWith:andRequestType:andRequestTitle:andRequestDetails:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
