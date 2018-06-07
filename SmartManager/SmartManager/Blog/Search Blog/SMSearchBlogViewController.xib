@@ -52,7 +52,7 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="161" y="51"/>
+            <point key="canvasLocation" x="385" y="-286"/>
         </view>
         <view contentMode="scaleToFill" id="GTF-GU-jKn">
             <rect key="frame" x="0.0" y="0.0" width="320" height="231"/>
@@ -323,6 +323,7 @@
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="-623" y="-266"/>
         </view>
     </objects>
     <resources>

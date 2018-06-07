@@ -109,6 +109,12 @@
     self.txtFieldUserName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Username" attributes:@{NSForegroundColorAttributeName:color}];
     
     self.txtFieldPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName:color}];
+    
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    if (screenSize.height == 812.0f){
+        topConstraintForLogo.constant = 100;
+    }
+    
 }
 
 - (void)tapped

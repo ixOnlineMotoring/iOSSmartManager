@@ -203,7 +203,7 @@
                         </pickerView>
                         <view contentMode="scaleToFill" id="j8n-lS-yXp">
                             <rect key="frame" x="0.0" y="0.0" width="287" height="42"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fEY-Ma-KRy" customClass="SMPopOverButtons">
                                     <rect key="frame" x="180" y="0.0" width="107" height="42"/>

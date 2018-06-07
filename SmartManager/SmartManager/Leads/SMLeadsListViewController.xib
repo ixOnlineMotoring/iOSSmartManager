@@ -139,7 +139,7 @@
                 </textField>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow" id="MwV-gc-mwN" customClass="downarr">
                     <rect key="frame" x="276" y="72" width="25" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.08235294118" green="0.08235294118" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

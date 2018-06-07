@@ -35,6 +35,8 @@
     NSMutableArray *arrOfModules;
     
     SMClassForRefreshingData *refreshData;
+    
+    IBOutlet NSLayoutConstraint *topConstraintForLogo;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *lblLoginErrorMessage;
