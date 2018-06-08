@@ -355,8 +355,11 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		[UIView commitAnimations];
 	}
 	else {
-		self.alpha = 0.0f;
-		[self done];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.alpha = 0.0f;
+            [self done];
+        });
+		
 	}
 	self.showStarted = nil;
 }

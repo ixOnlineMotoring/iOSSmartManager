@@ -907,6 +907,7 @@ static NSString *cellIdentifier= @"PhotosAndExtrasCellIdentifier";
             if([objectDidSelectForRow.strSortText isEqualToString:@"-- None --"])
                 [self.txtFieldSort setText:objectDidSelectForRow.strSortText];
             else
+                
                 [self.txtFieldSort setText:[NSString stringWithFormat:@"%@ (Descending)",objectDidSelectForRow.strSortText]];
             
             /*UIImage *rotatedImage = [UIImage imageWithCGImage:imageRef scale:1.0 orientation:UIImageOrientationDown];
