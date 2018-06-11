@@ -17,6 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgViewPlayVideo;
 
+@property (strong, nonatomic) IBOutlet UILabel *lblImgPriority;
 
 
 @end

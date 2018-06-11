@@ -3207,7 +3207,7 @@ qualifiedName:(NSString *)qName
             cellImages.btnDelete.tag = indexPath.row;
             
             SMPhotosListNSObject *imageObj = (SMPhotosListNSObject*)[arrayOfImages objectAtIndex:indexPath.row];
-            
+            cellImages.lblImgPriority.text = [NSString stringWithFormat:@"%d",indexPath.row+1];
             
             cellImages.webVYouTube.hidden=YES;
             if(imageObj.isImageFromLocal)
@@ -4767,9 +4767,11 @@ qualifiedName:(NSString *)qName
 }
 
 - (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout willEndDraggingItemAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 - (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout didEndDraggingItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView reloadData];
 }
 
 

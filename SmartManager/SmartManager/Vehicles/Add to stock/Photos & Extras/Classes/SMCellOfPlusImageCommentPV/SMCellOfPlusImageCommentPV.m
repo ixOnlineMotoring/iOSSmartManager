@@ -13,6 +13,8 @@
 @synthesize btnDelete;
 @synthesize imgActualImage;
 @synthesize imgPlusImage;
+@synthesize lblImgPriority;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
