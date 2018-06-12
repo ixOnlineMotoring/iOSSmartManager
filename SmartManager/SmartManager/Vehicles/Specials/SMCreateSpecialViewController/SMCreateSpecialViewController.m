@@ -830,6 +830,11 @@
         
         SMPhotosListNSObject *imageObj = (SMPhotosListNSObject*)[arrayCreateSpOfImages objectAtIndex:indexPath.row];
         
+        [cellImages.lblImgPriority setHidden: false];
+        cellImages.lblImgPriority.layer.masksToBounds = YES;
+        cellImages.lblImgPriority.layer.cornerRadius = cellImages.lblImgPriority.frame.size.width/2;
+        cellImages.lblImgPriority.text = [NSString stringWithFormat:@"%d",indexPath.row+1];
+        
         cellImages.webVYouTube.hidden=YES;
         
         if(imageObj.isImageFromLocal)
@@ -1044,7 +1049,23 @@
 {
     return YES;
 }
+#pragma mark - LXReorderableCollectionViewDelegateFlowLayout methods
 
+- (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout willBeginDraggingItemAtIndexPath:(NSIndexPath *)indexPath
+{
+}
+
+- (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout didBeginDraggingItemAtIndexPath:(NSIndexPath *)indexPath
+{
+}
+
+- (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout willEndDraggingItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout didEndDraggingItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView reloadData];
+}
 #pragma mark - UIPickerView Datasource
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView

@@ -655,7 +655,10 @@ static NSString *cellIdentifier= @"CommentsVPCellIdentifier";
             cellImages.btnDelete.tag = indexPath.row;
             
             SMPhotosListNSObject *imageObj = (SMPhotosListNSObject*)[arrayOfImages objectAtIndex:indexPath.row];//was crashing here.....
-            
+            [cellImages.lblImgPriority setHidden: false];
+            cellImages.lblImgPriority.layer.masksToBounds = YES;
+            cellImages.lblImgPriority.layer.cornerRadius = cellImages.lblImgPriority.frame.size.width/2;
+            cellImages.lblImgPriority.text = [NSString stringWithFormat:@"%d",indexPath.row+1];
             cellImages.webVYouTube.hidden=YES;
             
             if(imageObj.isImageFromLocal)
@@ -687,7 +690,7 @@ static NSString *cellIdentifier= @"CommentsVPCellIdentifier";
            
             [cellVideos.btnDelete addTarget:self action:@selector(btnDeleteVideosDidClicked:) forControlEvents:UIControlEventTouchUpInside];
             cellVideos.btnDelete.tag = indexPath.row;
-            
+            [cellVideos.lblImgPriority setHidden: true];
             if (videoObj.isVideoFromLocal==NO) // from server
             {
                 cellVideos.webVYouTube.backgroundColor=[UIColor clearColor];
@@ -1867,7 +1870,23 @@ static NSString *cellIdentifier= @"CommentsVPCellIdentifier";
     }*/
     
 }
+#pragma mark - LXReorderableCollectionViewDelegateFlowLayout methods
 
+- (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout willBeginDraggingItemAtIndexPath:(NSIndexPath *)indexPath
+{
+}
+
+- (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout didBeginDraggingItemAtIndexPath:(NSIndexPath *)indexPath
+{
+}
+
+- (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout willEndDraggingItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout didEndDraggingItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView reloadData];
+}
 - (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
     
     if (collectionView==self.collectionViewImages)

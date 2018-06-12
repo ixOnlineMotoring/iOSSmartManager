@@ -20,7 +20,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartManager/Vehicles/Add to stock/SMAddToStockViewController.m"
-            timestampString = "550399463.402596"
+            timestampString = "550494800.376079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1042"
@@ -36,7 +36,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartManager/Vehicles/Add to stock/SMAddToStockViewController.m"
-            timestampString = "550399463.403143"
+            timestampString = "550494800.3763191"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1049"
@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartManager/Vehicles/Add to stock/SMAddToStockViewController.m"
-            timestampString = "550399463.403476"
+            timestampString = "550494800.376491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4279"
-            endingLineNumber = "4279"
+            startingLineNumber = "4284"
+            endingLineNumber = "4284"
             landmarkName = "-callTheMultiplePhotoSelectionLibraryWithRemainingCount:andFromEditScreen:"
             landmarkType = "7">
          </BreakpointContent>
@@ -292,11 +292,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartManager/Support/Support Request/SMSupportRequestViewController.m"
-            timestampString = "550387858.0087399"
+            timestampString = "550494800.37714"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1523"
-            endingLineNumber = "1523"
+            startingLineNumber = "1543"
+            endingLineNumber = "1543"
             landmarkName = "-saveTheSupportRequest"
             landmarkType = "7">
          </BreakpointContent>
@@ -308,11 +308,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartManager/Support/Support Request/SMSupportRequestViewController.m"
-            timestampString = "550387858.0501651"
+            timestampString = "550494800.37737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1732"
-            endingLineNumber = "1732"
+            startingLineNumber = "1752"
+            endingLineNumber = "1752"
             landmarkName = "-btnSubmitDidClicked:"
             landmarkType = "7">
          </BreakpointContent>
@@ -324,7 +324,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartManager/Vehicles/Add to stock/Photos &amp; Extras/Classes/SMCommentVideosPhotosAddViewController/SMCommentVideosPhotosAddViewController.m"
-            timestampString = "550399463.404126"
+            timestampString = "550494800.377614"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "658"
@@ -340,11 +340,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartManager/Vehicles/Add to stock/SMAddToStockViewController.m"
-            timestampString = "550399463.404227"
+            timestampString = "550494800.377851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4737"
-            endingLineNumber = "4737"
+            startingLineNumber = "4742"
+            endingLineNumber = "4742"
             landmarkName = "-collectionView:itemAtIndexPath:willMoveToIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -356,11 +356,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartManager/Vehicles/Add to stock/SMAddToStockViewController.m"
-            timestampString = "550399463.404609"
+            timestampString = "550494800.3779629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4774"
-            endingLineNumber = "4774"
+            startingLineNumber = "4779"
+            endingLineNumber = "4779"
             landmarkName = "-collectionView:layout:didEndDraggingItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -372,11 +372,155 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartManager/Vehicles/Add to stock/Photos &amp; Extras/Classes/SMPhotosAndExtrasListViewController/SMPhotosAndExtrasListViewController.m"
-            timestampString = "550412539.725877"
+            timestampString = "550487900.254392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "846"
-            endingLineNumber = "846"
+            startingLineNumber = "845"
+            endingLineNumber = "845"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartManager/Vehicles/Add to stock/Photos &amp; Extras/Classes/SMCommentVideosPhotosAddViewController/SMCommentVideosPhotosAddViewController.m"
+            timestampString = "550494800.378136"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1888"
+            endingLineNumber = "1888"
+            landmarkName = "-collectionView:layout:didEndDraggingItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartManager/Vehicles/Specials/SMCreateSpecialViewController/SMCreateSpecialViewController.m"
+            timestampString = "550494800.378247"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1067"
+            endingLineNumber = "1067"
+            landmarkName = "-collectionView:layout:didEndDraggingItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartManager/Web Service /SMWebServices.m"
+            timestampString = "550491788.14184"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8975"
+            endingLineNumber = "8975"
+            landmarkName = "SMWebServices"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartManager/Vehicles/Stock/SMStockVehicleDetailController.m"
+            timestampString = "550494800.378396"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartManager/Vehicles/Stock/SMStockVehicleDetailController.m"
+            timestampString = "550494800.378498"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "361"
+            endingLineNumber = "361"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartManager/Vehicles/Stock/SMStockVehicleDetailController.m"
+            timestampString = "550494800.378589"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "401"
+            endingLineNumber = "401"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartManager/Vehicles/Stock/SMStockVehicleDetailController.m"
+            timestampString = "550494800.378685"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "345"
+            endingLineNumber = "345"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartManager/Vehicles/Vehicle Stock/SMVehicleStockListViewController.m"
+            timestampString = "550494389.682135"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartManager/Vehicles/Stock/SMStockListViewController.m"
+            timestampString = "550494409.531332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1065"
+            endingLineNumber = "1065"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
