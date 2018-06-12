@@ -1299,8 +1299,12 @@ cellImages = [collectionView dequeueReusableCellWithReuseIdentifier:@"SMCellOfSu
             {
                 [cellImages.imgActualImage setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",imageObj.imageLink]]placeholderImage:[UIImage imageNamed:@"placeholder.jpeg"]];
             }
+                [cellImages.lblImgPriority setHidden: false];
+                cellImages.lblImgPriority.layer.masksToBounds = YES;
+                cellImages.lblImgPriority.layer.cornerRadius = cellImages.lblImgPriority.frame.size.width/2;
+                cellImages.lblImgPriority.text = [NSString stringWithFormat:@"%d",indexPath.row+1];
             }else{
-            
+                [cellImages.lblImgPriority setHidden: true];
                 cellImages.imgActualImage.image = imageObj.imgThumbnailFromCloud;
             }
             
@@ -1347,7 +1351,23 @@ cellImages = [collectionView dequeueReusableCellWithReuseIdentifier:@"SMCellOfSu
 //    }
  
 }
+#pragma mark - LXReorderableCollectionViewDelegateFlowLayout methods
 
+- (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout willBeginDraggingItemAtIndexPath:(NSIndexPath *)indexPath
+{
+}
+
+- (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout didBeginDraggingItemAtIndexPath:(NSIndexPath *)indexPath
+{
+}
+
+- (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout willEndDraggingItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout didEndDraggingItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView reloadData];
+}
 //////////////////// Alert For Delete
 
 #pragma - Delete Clicked

@@ -11,5 +11,5 @@
 @interface SMCellOfSupportRequest : UICollectionViewCell
 @property (strong, nonatomic) IBOutlet UIButton *btnDelete;
 @property (strong, nonatomic) IBOutlet UIImageView *imgActualImage;
-
+@property (strong, nonatomic) IBOutlet UILabel *lblImgPriority;
 @end

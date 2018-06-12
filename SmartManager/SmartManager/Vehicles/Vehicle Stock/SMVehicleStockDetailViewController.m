@@ -174,7 +174,7 @@
         
         //[cellVideos.btnDelete addTarget:self action:@selector(btnDeleteVideosWebServiceDidClicked:) forControlEvents:UIControlEventTouchUpInside];
         cellVideos.btnDelete.hidden = YES;
-        
+        cellVideos.lblImgPriority.hidden = YES;
         cellVideos.btnDelete.tag = indexPath.row;
         
         if (videoObj.isVideoFromLocal==NO) // from server

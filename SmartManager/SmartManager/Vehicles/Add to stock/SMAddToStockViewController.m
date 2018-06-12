@@ -3207,6 +3207,9 @@ qualifiedName:(NSString *)qName
             cellImages.btnDelete.tag = indexPath.row;
             
             SMPhotosListNSObject *imageObj = (SMPhotosListNSObject*)[arrayOfImages objectAtIndex:indexPath.row];
+            [cellImages.lblImgPriority setHidden: false];
+            cellImages.lblImgPriority.layer.masksToBounds = YES;
+            cellImages.lblImgPriority.layer.cornerRadius = cellImages.lblImgPriority.frame.size.width/2;
             cellImages.lblImgPriority.text = [NSString stringWithFormat:@"%d",indexPath.row+1];
             
             cellImages.webVYouTube.hidden=YES;
@@ -3240,6 +3243,7 @@ qualifiedName:(NSString *)qName
            isPrioritiesImageChanged = YES;
             
         }
+        
         cellImages.imgActualImage.contentMode = UIViewContentModeScaleAspectFill;
 
         return cellImages;
@@ -3254,6 +3258,7 @@ qualifiedName:(NSString *)qName
             
             
             [cellVideos.btnDelete addTarget:self action:@selector(btnDeleteStockVideosDidClicked:) forControlEvents:UIControlEventTouchUpInside];
+            [cellVideos.lblImgPriority setHidden: true];
             cellVideos.btnDelete.tag = indexPath.row;
                       
             SMClassOfUploadVideos *videoObj = (SMClassOfUploadVideos*)[arrayOfVideos objectAtIndex:indexPath.row];
