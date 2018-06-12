@@ -436,7 +436,7 @@ static int HeightOfTableViewForIpad=730;
         if (totalFrameOfView <= maxHeigthOfView)
         {
             //Make View Size smaller, no scrolling
-            self.viewDropdownFrame.frame = CGRectMake(self.viewDropdownFrame.frame.origin.x, [self view].frame.size.height/2-totalFrameOfView/2+22.0, 280, totalFrameOfView);
+            self.viewDropdownFrame.frame = CGRectMake(self.viewDropdownFrame.frame.origin.x, [self view].frame.size.height/2-totalFrameOfView/2+22.0, self.viewDropdownFrame.frame.size.width, totalFrameOfView);
         }
         else
         {
@@ -2361,7 +2361,7 @@ static int HeightOfTableViewForIpad=730;
         return;
     
     
-    //[_popUpViewForSort setFrame:[UIScreen mainScreen].bounds];
+    [_popUpViewForSort setFrame:[UIScreen mainScreen].bounds];
     [_popUpViewForSort setBackgroundColor:[UIColor colorWithWhite:0.6 alpha:0.25]];
     [_popUpViewForSort setAlpha:0.0];
     [[[UIApplication sharedApplication]keyWindow]addSubview:_popUpViewForSort];

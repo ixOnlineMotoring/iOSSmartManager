@@ -726,7 +726,9 @@ static NSString *cellIdentifier= @"PhotosAndExtrasCellIdentifier";
     if(tableView != self.tableSortItems)
     {
         [self.btnShowFilter setTag:section];
-        
+
+        [self.headerView layoutIfNeeded];
+        [self.headerView layoutSubviews];
         return self.headerView;
     }
     
